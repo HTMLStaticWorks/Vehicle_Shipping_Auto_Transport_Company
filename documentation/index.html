@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation | ROADLINK AUTO HTML Template</title>
+  <meta name="description" content="Commercial HTML5 template documentation for RoadLink Auto Vehicle Shipping and Logistics.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .doc-sidebar {
+      position: sticky;
+      top: 90px;
+      height: calc(100vh - 110px);
+      overflow-y: auto;
+    }
+    pre {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      font-size: 0.875rem;
+      color: var(--text-main);
+    }
+    code {
+      color: var(--color-cta);
+      font-family: var(--font-mono);
+    }
+  </style>
+</head>
+<body class="bg-page">
+
+  <!-- Header -->
+  <header class="site-header py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <a class="navbar-brand" href="../index.html">
+          <svg viewBox="0 0 280 60" height="38" width="180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(6, 6)">
+              <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+              <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
+              <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+              <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+              <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+              <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+              <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+            <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="currentColor">
+              ROAD<tspan fill="#2563eb">LINK</tspan>
+            </text>
+            <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+            <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+          </svg>
+        </a>
+        <span class="badge bg-secondary text-white">Docs v1.0</span>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <button type="button" class="theme-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Toggle RTL mode"><span class="rtl-btn-text">RTL</span></button>
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars-fill text-primary"></i>
+        </button>
+        <a href="../index.html" class="btn btn-outline-custom btn-sm-custom">
+          <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container my-5">
+    <div class="row g-5">
+
+      <!-- Navigation Sidebar -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="doc-sidebar p-3 rounded-3 bg-surface border">
+          <h6 class="fw-bold text-uppercase text-muted small mb-3">Documentation Index</h6>
+          <nav class="nav nav-pills flex-column gap-1 small">
+            <a class="nav-link active" href="#intro">1. Overview</a>
+            <a class="nav-link" href="#structure">2. File Structure</a>
+            <a class="nav-link" href="#theming">3. Dark / Light Mode</a>
+            <a class="nav-link" href="#navbar">4. Navigation System</a>
+            <a class="nav-link" href="#tracking">5. Tracking Module</a>
+            <a class="nav-link" href="#quote">6. Quote Calculator</a>
+            <a class="nav-link" href="#auth">7. Authentication UI</a>
+            <a class="nav-link" href="#animations">8. GSAP Animations</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Docs Content -->
+      <div class="col-lg-9">
+        <div class="p-4 p-md-5 rounded-4 bg-surface border shadow-sm">
+
+          <!-- 1. Overview -->
+          <section id="intro" class="mb-5 pb-4 border-bottom">
+            <h1 class="h3 fw-bold mb-3">1. Template Overview</h1>
+            <p class="text-muted">
+              <strong>ROADLINK AUTO</strong> is a commercial-grade HTML5 template engineered specifically for vehicle shipping companies, auto transport brokers, car haulers, and automotive freight logistics operators.
+            </p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="p-3 rounded bg-subtle border">
+                  <strong>Technology Stack:</strong>
+                  <ul class="mb-0 small text-muted ps-3 mt-1">
+                    <li>HTML5 Semantic Markup</li>
+                    <li>Bootstrap 5.3.3</li>
+                    <li>Bootstrap Icons 1.11.3</li>
+                    <li>Vanilla CSS3 (Design Tokens)</li>
+                    <li>GSAP 3.12 (Micro-animations)</li>
+                    <li>Vanilla JavaScript (Zero heavy frameworks)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 rounded bg-subtle border">
+                  <strong>Key Highlights:</strong>
+                  <ul class="mb-0 small text-muted ps-3 mt-1">
+                    <li>19 Production-Ready HTML Pages</li>
+                    <li>Full Light &amp; Dark Theme Persistence</li>
+                    <li>Front-End Tracking Simulation (RL-2026-04821)</li>
+                    <li>Multi-Section Interactive Quote Calculator</li>
+                    <li>Strict No-Dashboard Compliant Auth UI</li>
+                    <li>100% Responsive from 320px to 2560px+</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. File Structure -->
+          <section id="structure" class="mb-5 pb-4 border-bottom">
+            <h2 class="h4 fw-bold mb-3">2. File &amp; Folder Structure</h2>
+            <pre><code>vehicle-shipping-auto-transport/
+│
+├── index.html                   # Home 1 (High-conversion portal)
+├── home-2.html                  # Home 2 (Logistics control center layout)
+│
+├── services.html                # Comprehensive services catalog (8 services)
+├── service-details.html         # Reusable service specifications template
+│
+├── open-transport.html          # Open Carrier hauling detailed page
+├── enclosed-transport.html      # Enclosed Carrier hauling detailed page
+├── door-to-door.html            # Door-to-Door delivery logistics page
+├── dealer-transport.html        # B2B Dealer and fleet transport page
+│
+├── shipping-solutions.html      # Solutions matrix by audience & corridor
+├── shipping-process.html        # 6-Stage logistics workflow & prep checklist
+│
+├── tracking.html                # Interactive shipment tracking portal
+├── get-a-quote.html             # Multi-section quote calculator form
+│
+├── about.html                   # Brand story, safety standards & values
+├── contact.html                 # Dispatch coordinates & inquiry form
+├── dashboard.html               # Customer transport booking & tracking dashboard
+│
+├── login.html                   # Standalone authentication UI (no dashboard)
+├── signup.html                  # Standalone registration UI (no dashboard)
+├── forgot-password.html         # Password recovery UI with simulated link
+│
+├── 404.html                     # "Route Not Found" error page
+├── coming-soon.html             # Live launch countdown timer page
+│
+├── assets/
+│   ├── css/
+│   │   ├── bootstrap.min.css    # Official minified Bootstrap 5.3.3
+│   │   ├── bootstrap-icons.min.css # Bootstrap icons stylesheet
+│   │   ├── style.css            # Master theme & design tokens
+│   │   └── fonts/               # Webfonts for offline icon rendering
+│   ├── js/
+│   │   ├── bootstrap.bundle.min.js # Bootstrap bundle with Popper
+│   │   ├── gsap.min.js          # GSAP 3.12 animation library
+│   │   └── main.js              # Core application logic & event handlers
+│   ├── images/                  # High-resolution transport & carrier imagery
+│   └── icons/                   # Vector logo & favicon assets
+│
+├── documentation/
+│   └── index.html               # This documentation file
+└── README.md                    # Project README</code></pre>
+          </section>
+
+          <!-- 3. Theming -->
+          <section id="theming" class="mb-5 pb-4 border-bottom">
+            <h2 class="h4 fw-bold mb-3">3. Dark / Light Mode System</h2>
+            <p class="text-muted">
+              Theme switching is managed through CSS custom properties attached to <code>[data-theme="light"]</code> and <code>[data-theme="dark"]</code> in <code>assets/css/style.css</code>.
+            </p>
+            <p class="text-muted">
+              When a user toggles the theme button, <code>main.js</code> updates the <code>data-theme</code> attribute on <code>&lt;html&gt;</code> and persists the user preference in <code>localStorage.setItem('roadlink_theme', theme)</code>.
+            </p>
+            <pre><code>/* Example Theme Custom Properties */
+:root {
+  --color-primary: #1e40af;
+  --color-cta: #ea580c;
+}
+
+[data-theme="light"] {
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0b1322;
+  --bg-surface: #111c30;
+  --text-main: #e2e8f0;
+}</code></pre>
+          </section>
+
+          <!-- 4. Navigation -->
+          <section id="navbar" class="mb-5 pb-4 border-bottom">
+            <h2 class="h4 fw-bold mb-3">4. Navigation Structure</h2>
+            <p class="text-muted">
+              The template includes a sticky responsive header with multi-level dropdowns configured to prevent viewport overflow:
+            </p>
+            <ul>
+              <li><strong>Home ▾</strong>: Home 1 (Transport Portal), Home 2 (Logistics Control)</li>
+              <li><strong>Shipping Solutions ▾</strong>: Nationwide Shipping, Cross-Country, Dealer &amp; Auction, Luxury &amp; Classic, Shipping Process</li>
+              <li><strong>Direct Nav Links</strong>: Tracking, Get a Quote, About, Contact, <strong>Dashboard</strong></li>
+              <li><strong>Controls &amp; Action Buttons</strong>: RTL Mode Toggle, Theme Switcher, Sign Up Button</li>
+            </ul>
+          </section>
+
+          <!-- 5. Tracking -->
+          <section id="tracking" class="mb-5 pb-4 border-bottom">
+            <h2 class="h4 fw-bold mb-3">5. Tracking Simulation Module</h2>
+            <p class="text-muted">
+              The tracking interface supports live simulation for any input or default tracking ID <code>RL-2026-04821</code>. It renders the 6-stage visual pipeline, origin/destination coordinates, driver details, and status updates dynamically without page reload.
+            </p>
+          </section>
+
+          <!-- 6. Quote -->
+          <section id="quote" class="mb-5 pb-4 border-bottom">
+            <h2 class="h4 fw-bold mb-3">6. Quote Calculator Module</h2>
+            <p class="text-muted">
+              The quote form validates required fields (origin, destination, year, make, model, customer contact) using HTML5 and Bootstrap validation classes. On submission, an interactive modal or in-page alert calculates estimated price ranges based on the selected carrier type (Open vs Enclosed).
+            </p>
+          </section>
+
+          <!-- 7. Auth -->
+          <section id="auth" class="mb-5 pb-4 border-bottom">
+            <h2 class="h4 fw-bold mb-3">7. Authentication UI (No Dashboard)</h2>
+            <p class="text-muted">
+              <code>login.html</code>, <code>signup.html</code>, and <code>forgot-password.html</code> are front-end authentication UI demonstrations with real-time field validation and password visibility toggles. In strict accordance with template guidelines, they do not redirect to any client dashboard.
+            </p>
+          </section>
+
+          <!-- 8. Animations -->
+          <section id="animations">
+            <h2 class="h4 fw-bold mb-3">8. GSAP Micro-Animations &amp; Accessibility</h2>
+            <p class="text-muted">
+              Elements marked with <code>.gsap-reveal</code> trigger subtle entrance transitions when scrolling into view via IntersectionObserver. The system automatically honors <code>prefers-reduced-motion: reduce</code> media queries for accessibility compliance.
+            </p>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="py-4 border-top border-subtle bg-surface text-center small text-muted">
+    <div class="container">
+      &copy; 2026 ROADLINK AUTO. Commercial template documentation.
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

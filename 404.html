@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Route Not Found | ROADLINK AUTO</title>
+  <meta name="description" content="Route Not Found. The waypoint or page you are searching for cannot be located on the RoadLink Auto logistics network.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-page">
+
+  <!-- Header Minimal -->
+  <header class="site-header py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="index.html" aria-label="RoadLink Auto Home">
+        <svg viewBox="0 0 280 60" height="40" width="186" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(6, 6)">
+            <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+            <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
+            <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+            <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+            <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+            <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+            <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="currentColor">
+            ROAD<tspan fill="#2563eb">LINK</tspan>
+          </text>
+          <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+          <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+        </svg>
+      </a>
+
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="theme-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Toggle RTL mode"><span class="rtl-btn-text">RTL</span></button>
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars-fill text-primary"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Main Workspace -->
+  <main class="flex-grow-1 d-flex align-items-center py-5">
+    <div class="container text-center max-w-700 mx-auto">
+      <div class="p-4 p-md-5 rounded-4 shadow-xl border bg-surface" style="background: var(--bg-surface-elevated);">
+        <div class="display-1 fw-bold text-cta mb-2">404</div>
+        <div class="logistics-badge bg-warning text-dark mb-3">
+          <i class="bi bi-exclamation-triangle-fill"></i> DETOUR ENCOUNTERED
+        </div>
+        <h1 class="h2 fw-bold mb-3">Route Not Found</h1>
+        <p class="text-muted fs-5 mb-4">
+          The waypoint or page you are looking for has been relocated or could not be tracked within our active logistics network.
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="index.html" class="btn btn-primary-custom btn-lg-custom">
+            <i class="bi bi-house-door-fill me-1"></i> Back to Home
+          </a>
+          <a href="get-a-quote.html" class="btn btn-cta btn-lg-custom">
+            <i class="bi bi-calculator me-1"></i> Get a Free Quote
+          </a>
+          <a href="tracking.html" class="btn btn-outline-custom btn-lg-custom">
+            <i class="bi bi-radar me-1"></i> Track Shipment
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3 border-top border-subtle bg-surface text-center small text-muted">
+    <div class="container">
+      &copy; 2026 ROADLINK AUTO. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

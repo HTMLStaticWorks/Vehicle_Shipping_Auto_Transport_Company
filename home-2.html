@@ -1,0 +1,761 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROADLINK AUTO | Logistics Control Center &amp; Auto Transport Operations</title>
+  <meta name="description" content="Nationwide Auto Transport, Organized From Pickup to Delivery. Advanced vehicle logistics control center, fleet coordination, and carrier route tracking.">
+  <meta name="keywords" content="auto transport control center, fleet logistics, vehicle shipping operations, open vs enclosed transport comparison, nationwide carrier tracking">
+  <meta property="og:title" content="ROADLINK AUTO | Logistics Control Center">
+  <meta property="og:description" content="Nationwide auto transport organized with central dispatch efficiency, carrier network coordination, and route transparency.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Vendor Styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+
+  <!-- Main Template Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP STATUS BAR
+       ========================================================================== -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-hdd-network text-success me-1"></i> Central Dispatch Status: <strong class="text-white">Active (All Corridors Operational)</strong></span>
+        <span class="text-secondary">|</span>
+        <span><i class="bi bi-geo-alt-fill text-primary me-1"></i> 50 States Coordinated</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:18005557623" class="text-decoration-none"><i class="bi bi-telephone-fill me-1 text-primary"></i> (800) 555-ROAD</a>
+        <span class="text-secondary">|</span>
+        <a href="tracking.html" class="text-decoration-none"><i class="bi bi-radar text-warning me-1"></i> Dispatch Tracking</a>
+        <span class="text-secondary">|</span>
+        <a href="login.html" class="text-decoration-none"><i class="bi bi-person-fill me-1"></i> Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MANDATORY STICKY NAVBAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light py-2" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html" aria-label="RoadLink Auto Home">
+          <svg viewBox="0 0 280 60" height="42" width="196" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(6, 6)">
+              <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+              <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
+              <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+              <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+              <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+              <circle cx="16" cy="34" r="1.5" fill="#0f172a"/>
+              <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+              <circle cx="34" cy="34" r="1.5" fill="#0f172a"/>
+              <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+            <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="currentColor">
+              ROAD<tspan fill="#2563eb">LINK</tspan>
+            </text>
+            <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+            <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+            <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#64748b" letter-spacing="1.2">CONTROL CENTER</text>
+          </svg>
+        </a>
+
+        <!-- Mobile Controls -->
+        <!-- Mobile & Tab Header Controls (Hamburger Only) -->
+        <div class="d-xl-none">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 — Transport Portal</a></li>
+                <li><a class="dropdown-item active" href="home-2.html"><i class="bi bi-hdd-network"></i> Home 2 — Logistics Control</a></li>
+              </ul>
+            </li>
+
+            <!-- Shipping Solutions Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Shipping Solutions
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <li><a class="dropdown-item" href="shipping-solutions.html#nationwide"><i class="bi bi-globe-americas"></i> Nationwide Shipping</a></li>
+                <li><a class="dropdown-item" href="shipping-solutions.html#cross-country"><i class="bi bi-signpost-2-fill"></i> Cross-Country Transport</a></li>
+                <li><a class="dropdown-item" href="shipping-solutions.html#dealer-auction"><i class="bi bi-cash-coin"></i> Dealer &amp; Auction Transport</a></li>
+                <li><a class="dropdown-item" href="shipping-solutions.html#luxury-classic"><i class="bi bi-gem"></i> Luxury &amp; Classic Transport</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="shipping-process.html"><i class="bi bi-diagram-3-fill"></i> Shipping Process</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="tracking.html">Tracking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="get-a-quote.html">Get a Quote</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Desktop Right Controls (1200px+) -->
+          <div class="d-none d-xl-flex align-items-center gap-2">
+            <button type="button" class="theme-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Toggle RTL mode"><span class="rtl-btn-text">RTL</span></button>
+            <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="bi bi-moon-stars-fill text-primary"></i>
+            </button>
+            <a href="signup.html" class="btn btn-outline-primary btn-sm-custom fw-bold ms-1">Sign Up</a>
+          </div>
+
+          <!-- Mobile & Tab In-Menu Controls: Signup, RTL & Theme Buttons -->
+          <div class="d-xl-none pt-3 mt-3 border-top border-subtle d-flex flex-column gap-2">
+            <a href="signup.html" class="btn btn-primary w-100 fw-bold py-2">
+              <i class="bi bi-person-plus-fill me-1"></i> Sign Up
+            </a>
+            <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-subtle border">
+              <span class="small fw-semibold text-muted">Layout &amp; Theme</span>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="theme-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Toggle RTL mode">
+                  <span class="rtl-btn-text">RTL</span>
+                </button>
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+                  <i class="bi bi-moon-stars-fill text-primary"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO: SPLIT-SCREEN LOGISTICS CONTROL CENTER
+       ========================================================================== -->
+  <section class="control-center-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Left Hero Column -->
+        <div class="col-lg-6 gsap-reveal">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3 border bg-surface" style="font-size: 0.8125rem;">
+            <span class="spinner-grow spinner-grow-sm text-success" role="status"></span>
+            <span class="fw-bold">CENTRAL DISPATCH OPERATIONS</span>
+          </div>
+
+          <h1 class="display-5 fw-bold mb-3 lh-sm">
+            Nationwide Auto Transport, <br>
+            <span class="text-primary">Organized From Pickup to Delivery</span>
+          </h1>
+
+          <p class="text-muted fs-5 mb-4">
+            A modernized logistics framework linking vehicle owners and enterprise dealerships with pre-screened carrier fleets. Experience transparent transit schedules, rigorous safety inspections, and live corridor visibility.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="get-a-quote.html" class="btn btn-cta btn-lg-custom">
+              <i class="bi bi-calendar2-check-fill me-2"></i> Schedule a Transport
+            </a>
+            <a href="tracking.html" class="btn btn-outline-custom btn-lg-custom">
+              <i class="bi bi-search me-2"></i> Live Fleet Tracking
+            </a>
+          </div>
+
+          <!-- Quick Dispatch Corridor Stats -->
+          <div class="row g-3 pt-3 border-top border-subtle">
+            <div class="col-4">
+              <div class="small text-muted">Active Corridors</div>
+              <div class="h5 fw-bold mb-0 text-heading">148 Lanes</div>
+            </div>
+            <div class="col-4 border-start ps-3">
+              <div class="small text-muted">Carrier Units</div>
+              <div class="h5 fw-bold mb-0 text-primary">Pre-Screened</div>
+            </div>
+            <div class="col-4 border-start ps-3">
+              <div class="small text-muted">Average Booking</div>
+              <div class="h5 fw-bold mb-0 text-cta">&lt; 24 Hours</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero: Live Control Center Visual & Active Status Panel -->
+        <div class="col-lg-6 gsap-reveal">
+          <div class="position-relative">
+            <!-- Background Fleet Image -->
+            <div class="rounded-4 overflow-hidden shadow-xl border" style="height: 380px;">
+              <img src="assets/images/hero/hero-control-room.jpg" alt="RoadLink Auto Logistics Control Center" class="img-cover">
+            </div>
+
+            <!-- Floating Active Shipment Dispatch Status Panel -->
+            <div class="dispatch-status-card position-absolute bottom-0 start-0 m-3 m-md-4 p-3 shadow-xl" style="max-width: 440px; background: var(--bg-surface); backdrop-filter: blur(16px); border-radius: var(--radius-lg);">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary"><i class="bi bi-radar"></i> Active Transit Unit</span>
+                <span class="small text-muted">Updated 4m ago</span>
+              </div>
+              <div class="fw-bold fs-6 mb-1 text-heading">Unit #704 • 9-Car Open Hauler</div>
+              <div class="small text-muted mb-2">
+                <i class="bi bi-geo-alt-fill text-cta"></i> Albuquerque, NM → Dallas Super-Hub, TX
+              </div>
+              <div class="progress" style="height: 6px;" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 68%"></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2 small">
+                <span class="text-muted">Status: <strong class="text-success">On Schedule</strong></span>
+                <a href="tracking.html" class="fw-bold text-primary">View Telematics <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: SHIPMENT COVERAGE & GEOGRAPHIC LANES
+       ========================================================================== -->
+  <section class="section-padding bg-subtle">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 gsap-reveal">
+          <div class="p-2 p-md-3 rounded-4 shadow-md bg-surface border">
+            <img src="assets/images/maps/us-coverage-map.svg" alt="RoadLink Geographic Corridors Map" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+          </div>
+        </div>
+
+        <div class="col-lg-5 gsap-reveal">
+          <span class="section-subtitle">Geographic Reach</span>
+          <h2 class="section-title mb-3">50-State Integrated Carrier Lanes</h2>
+          <p class="text-muted mb-4">
+            Our logistics framework bridges metropolitan distribution nodes with regional suburban routes. Through systematic carrier lane matching, we eliminate unnecessary transit detours and minimize dwell times.
+          </p>
+
+          <div class="list-group list-group-flush mb-4 bg-transparent">
+            <div class="list-group-item bg-transparent border-subtle px-0 d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-heading">I-10 Transcontinental Corridor</strong>
+                <small class="d-block text-muted">Los Angeles, Phoenix, San Antonio, Houston, Jacksonville</small>
+              </div>
+              <span class="badge bg-secondary text-white">High Volume</span>
+            </div>
+
+            <div class="list-group-item bg-transparent border-subtle px-0 d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-heading">I-80 Midwest - West Corridor</strong>
+                <small class="d-block text-muted">San Francisco, Salt Lake City, Omaha, Chicago, New York</small>
+              </div>
+              <span class="badge bg-secondary text-white">Daily Rigs</span>
+            </div>
+
+            <div class="list-group-item bg-transparent border-subtle px-0 d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-heading">I-95 Atlantic Seaboard Corridor</strong>
+                <small class="d-block text-muted">Boston, New York, Philadelphia, Richmond, Miami</small>
+              </div>
+              <span class="badge bg-secondary text-white">Express Lane</span>
+            </div>
+          </div>
+
+          <a href="shipping-solutions.html" class="btn btn-outline-custom">
+            Review Regional Transit Schedules <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: TRANSPORT OPTIONS (OPEN VS ENCLOSED COMPARISON MATRIX)
+       ========================================================================== -->
+  <section class="section-padding bg-surface">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto section-title-wrap gsap-reveal">
+        <span class="section-subtitle">Methodology Comparison</span>
+        <h2 class="section-title">Open vs. Enclosed Auto Transport</h2>
+        <p class="text-muted">Choose the ideal protection tier for your vehicle specifications, budget, and delivery timeline.</p>
+      </div>
+
+      <div class="comparison-table-wrap gsap-reveal">
+        <div class="table-responsive">
+          <table class="table table-comparison">
+            <thead>
+              <tr>
+                <th style="width: 28%;">Feature Comparison</th>
+                <th style="width: 36%;" class="text-primary"><i class="bi bi-truck me-2"></i> Open Auto Transport</th>
+                <th style="width: 36%;" class="text-cta"><i class="bi bi-shield-shaded me-2"></i> Enclosed Auto Transport</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold text-heading">Ideal Vehicle Types</td>
+                <td>Standard sedans, SUVs, trucks, daily commute cars, dealer stock.</td>
+                <td>Exotic supercars, vintage antiques, high-value luxury models.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-heading">Carrier Rig Design</td>
+                <td>Multi-level open steel trailer (holds 7 to 10 vehicles).</td>
+                <td>Fully enclosed rigid-sided trailer (holds 2 to 6 vehicles).</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-heading">Weather &amp; Road Exposure</td>
+                <td>Vehicles exposed to normal highway wind, rain, and dust.</td>
+                <td>100% shielded from road debris, UV rays, dirt, and storms.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-heading">Loading Mechanism</td>
+                <td>Standard mechanical drive-on ramps with soft wheel straps.</td>
+                <td>Hydraulic level-lift gates (ground clearance protected).</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-heading">Cost Profile</td>
+                <td><span class="badge bg-success">Most Economical</span> (Industry standard)</td>
+                <td><span class="badge bg-warning text-dark">Premium Tier</span> (~35% to 50% higher)</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-heading">Dispatch Availability</td>
+                <td>Fastest scheduling due to vast carrier network capacity.</td>
+                <td>Scheduled with dedicated white-glove enclosed rigs.</td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-heading">Detailed Specifications</td>
+                <td>
+                  <a href="open-transport.html" class="btn btn-sm-custom btn-primary-custom w-100">
+                    Open Carrier Details <i class="bi bi-arrow-right"></i>
+                  </a>
+                </td>
+                <td>
+                  <a href="enclosed-transport.html" class="btn btn-sm-custom btn-cta w-100">
+                    Enclosed Carrier Details <i class="bi bi-arrow-right"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: LOGISTICS TIMELINE ROUTE (Pickup -> Carrier -> Transit -> Delivery)
+       ========================================================================== -->
+  <section class="section-padding bg-subtle">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto section-title-wrap gsap-reveal">
+        <span class="section-subtitle">Operational Sequence</span>
+        <h2 class="section-title">The Logistics Route Pipeline</h2>
+        <p class="text-muted">A synchronized workflow connecting dispatch confirmation, vehicle intake, and destination turnover.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center row-cards-1024-2col">
+        <!-- Node 1: Pickup -->
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom p-4 h-100">
+            <div class="feature-icon-badge">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <span class="badge bg-primary mb-2">Stage 01</span>
+            <h3 class="h5 fw-bold mb-2">Pickup Coordination</h3>
+            <p class="text-muted small mb-0">
+              The assigned driver contacts the client 24 hours and 2 hours prior to arrival. Street clearance and meeting parameters are verified.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 2: Inspection & Assignment -->
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom p-4 h-100">
+            <div class="feature-icon-badge orange">
+              <i class="bi bi-clipboard2-check-fill"></i>
+            </div>
+            <span class="badge bg-warning text-dark mb-2">Stage 02</span>
+            <h3 class="h5 fw-bold mb-2">Intake &amp; BOL Inspection</h3>
+            <p class="text-muted small mb-0">
+              A comprehensive walkaround inspection records pre-existing conditions. Both client and driver sign the digital Bill of Lading.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 3: Highway Transit -->
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom p-4 h-100">
+            <div class="feature-icon-badge">
+              <i class="bi bi-truck"></i>
+            </div>
+            <span class="badge bg-primary mb-2">Stage 03</span>
+            <h3 class="h5 fw-bold mb-2">Interstate Transit</h3>
+            <p class="text-muted small mb-0">
+              The carrier navigates designated interstate freight lanes with regular checkpoint logging and telematics reporting back to central dispatch.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 4: Final Delivery -->
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom p-4 h-100">
+            <div class="feature-icon-badge orange">
+              <i class="bi bi-flag-fill"></i>
+            </div>
+            <span class="badge bg-success text-white mb-2">Stage 04</span>
+            <h3 class="h5 fw-bold mb-2">Turnover &amp; Release</h3>
+            <p class="text-muted small mb-0">
+              Vehicle is gently rolled off ramps at the destination. A final matching inspection is performed, delivery receipt countersigned, and keys handed over.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: FLEET & CARRIER NETWORK VISUAL
+       ========================================================================== -->
+  <section class="section-padding bg-surface">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 gsap-reveal">
+          <span class="section-subtitle">Vetted Capacity</span>
+          <h2 class="section-title mb-3">Professional Carrier Fleet Coordination</h2>
+          <p class="text-muted mb-4">
+            RoadLink Auto coordinates with a verified nationwide network of independent and contracted automotive carriers. Our compliance team verifies insurance policy limits, DOT safety records, and equipment maintenance certifications before any vehicle is loaded.
+          </p>
+
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="p-3 rounded bg-subtle border">
+                <div class="h5 fw-bold text-primary mb-1">Commercial Carriers</div>
+                <p class="small text-muted mb-0">Double-deck 9-car haulers, 3-car wedge trailers, and hard-sided hydraulic rigs.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 rounded bg-subtle border">
+                <div class="h5 fw-bold text-cta mb-1">DOT / FMCSA Verified</div>
+                <p class="small text-muted mb-0">Active operating authority and continuous automated compliance audits.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="small text-muted">
+            <em>Disclaimer: Carrier vehicles are operated by verified licensed carrier partners within RoadLink's dispatch logistics network.</em>
+          </p>
+        </div>
+
+        <div class="col-lg-6 gsap-reveal">
+          <div class="row g-3">
+            <div class="col-6">
+              <img src="assets/images/trucks/carrier-fleet.jpg" alt="Commercial Auto Hauler Fleet" class="rounded-4 shadow-md w-100 mb-3" style="height: 220px; object-fit: cover;">
+              <img src="assets/images/transport/loading.jpg" alt="Loading car onto carrier ramp" class="rounded-4 shadow-md w-100" style="height: 160px; object-fit: cover;">
+            </div>
+            <div class="col-6">
+              <img src="assets/images/trucks/driver-cab.jpg" alt="Professional auto transport driver" class="rounded-4 shadow-md w-100 mb-3" style="height: 160px; object-fit: cover;">
+              <img src="assets/images/services/cross-country.jpg" alt="Interstate highway transport carrier" class="rounded-4 shadow-md w-100" style="height: 220px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: TRANSPARENT PROCESS (What to Expect at Each Stage)
+       ========================================================================== -->
+  <section class="section-padding bg-subtle">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto section-title-wrap gsap-reveal">
+        <span class="section-subtitle">Transparency First</span>
+        <h2 class="section-title">What to Expect During Your Transport</h2>
+        <p class="text-muted">No surprises or fine print. Here is exactly what occurs at each milestone of your vehicle shipment.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center row-cards-1024-2col">
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="p-4 rounded-4 bg-surface border h-100">
+            <div class="fw-bold text-primary mb-2">01 • Booking Phase</div>
+            <h3 class="h6 fw-bold mb-2">Clear Terms &amp; Quoted Rate</h3>
+            <p class="small text-muted mb-0">
+              Your quote locks in all transportation costs including fuel, insurance, and toll surcharges. No hidden terminal surcharges added later.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="p-4 rounded-4 bg-surface border h-100">
+            <div class="fw-bold text-cta mb-2">02 • Pickup Phase</div>
+            <h3 class="h6 fw-bold mb-2">Driver Contact &amp; Inspection</h3>
+            <p class="small text-muted mb-0">
+              Direct driver phone contact. Joint inspection of vehicle condition with date-stamped digital photographic records for security.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="p-4 rounded-4 bg-surface border h-100">
+            <div class="fw-bold text-primary mb-2">03 • Transit Phase</div>
+            <h3 class="h6 fw-bold mb-2">Active Milestone Updates</h3>
+            <p class="small text-muted mb-0">
+              Online tracking system shows transit status along designated highway corridors. Dispatch agents available for route queries.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="p-4 rounded-4 bg-surface border h-100">
+            <div class="fw-bold text-cta mb-2">04 • Delivery Phase</div>
+            <h3 class="h6 fw-bold mb-2">Destination Sign-Off</h3>
+            <p class="small text-muted mb-0">
+              Vehicle unloaded in your presence. Final walkthrough matches the initial Bill of Lading, giving you complete confidence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: EXPANDED TRACKING EXPERIENCE PREVIEW
+       ========================================================================== -->
+  <section class="section-padding bg-surface">
+    <div class="container">
+      <div class="p-4 p-md-5 rounded-4 shadow-xl border" style="background: var(--bg-surface-elevated);">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 gsap-reveal">
+            <span class="logistics-badge bg-primary text-white mb-2">Dispatch Telematics</span>
+            <h2 class="section-title mb-3">Live Fleet Tracking Experience</h2>
+            <p class="text-muted mb-4">
+              Enter any assigned consignment code to view carrier positioning, road status checkpoints, and expected delivery windows.
+            </p>
+
+            <form class="shipment-tracking-form mb-3">
+              <label for="controlTrackingInput" class="form-label">
+                <span>Enter Consignment Number</span>
+                <span class="text-muted small">Demo: <strong class="text-primary">RL-2026-04821</strong></span>
+              </label>
+              <div class="input-group">
+                <input type="text" class="form-control tracking-input" id="controlTrackingInput" name="tracking_number" value="RL-2026-04821" required>
+                <button type="submit" class="btn btn-cta">Track Route</button>
+              </div>
+            </form>
+            <small class="text-muted d-block">
+              <i class="bi bi-info-circle me-1"></i> Front-end simulation demonstrating user tracking interface.
+            </small>
+          </div>
+
+          <div class="col-lg-7 gsap-reveal">
+            <div class="tracking-result-panel m-0" id="trackingResultArea">
+              <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                <div>
+                  <small class="text-muted">Waybill Ref</small>
+                  <div class="h5 fw-bold mb-0 text-primary tracking-val-id">RL-2026-04821</div>
+                </div>
+                <div>
+                  <span class="logistics-badge badge-in-transit tracking-val-status">In Transit</span>
+                </div>
+              </div>
+
+              <div class="position-relative my-4">
+                <ol class="shipment-timeline">
+                  <div class="timeline-progress-bar" style="width: 65%;"></div>
+                  <li class="timeline-step completed">
+                    <div class="timeline-node"><i class="bi bi-check-lg"></i></div>
+                    <div class="timeline-step-title">Booked</div>
+                  </li>
+                  <li class="timeline-step completed">
+                    <div class="timeline-node"><i class="bi bi-check-lg"></i></div>
+                    <div class="timeline-step-title">Assigned</div>
+                  </li>
+                  <li class="timeline-step completed">
+                    <div class="timeline-node"><i class="bi bi-check-lg"></i></div>
+                    <div class="timeline-step-title">Loaded</div>
+                  </li>
+                  <li class="timeline-step active">
+                    <div class="timeline-node"><i class="bi bi-truck"></i></div>
+                    <div class="timeline-step-title">Transit</div>
+                  </li>
+                  <li class="timeline-step">
+                    <div class="timeline-node"><i class="bi bi-clock"></i></div>
+                    <div class="timeline-step-title">Destination</div>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="p-3 rounded bg-subtle border small">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="text-muted">Consignment:</span>
+                  <span class="fw-bold tracking-val-vehicle">2024 Ford F-150 SuperCrew</span>
+                </div>
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="text-muted">Route:</span>
+                  <span class="fw-bold"><span class="tracking-val-origin">Los Angeles, CA</span> → <span class="tracking-val-dest">Dallas, TX</span></span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-muted">Latest Telematics:</span>
+                  <span class="fw-bold text-cta tracking-val-update">Highway Milepost 184 AZ • On Schedule</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: FINAL QUOTE CONVERSION CTA
+       ========================================================================== -->
+  <section class="section-padding bg-subtle">
+    <div class="container text-center max-w-700 mx-auto gsap-reveal">
+      <span class="section-subtitle">Reserve Carrier Capacity</span>
+      <h2 class="display-6 fw-bold mb-3">Coordinate Your Vehicle Transport Now</h2>
+      <p class="text-muted fs-5 mb-4">
+        Speak with central dispatch or calculate instant door-to-door rates across open and enclosed carrier routes.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="get-a-quote.html" class="btn btn-cta btn-lg-custom">
+          <i class="bi bi-calculator"></i> Calculate Instant Quote
+        </a>
+        <a href="contact.html" class="btn btn-outline-custom btn-lg-custom">
+          <i class="bi bi-headset"></i> Contact Central Dispatch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="mb-3">
+            <svg viewBox="0 0 280 60" height="38" width="180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(6, 6)">
+                <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
+                <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+                <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+                <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+                <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+                <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+              <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="#ffffff">
+                ROAD<tspan fill="#3b82f6">LINK</tspan>
+              </text>
+              <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+              <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+            </svg>
+          </div>
+          <p class="small text-muted mb-3">
+            “Reliable Vehicle Transport, From Pickup to Delivery.” Central logistics operations and pre-screened carrier dispatch coordination nationwide.
+          </p>
+          <div class="d-flex gap-2">
+            <span class="logistics-badge bg-dark text-muted"><i class="bi bi-shield-check text-success"></i> DOT Verified</span>
+            <span class="logistics-badge bg-dark text-muted"><i class="bi bi-hdd-network text-primary"></i> Control Room</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-links">
+            <li><a href="open-transport.html"><i class="bi bi-chevron-right"></i> Open Transport</a></li>
+            <li><a href="enclosed-transport.html"><i class="bi bi-chevron-right"></i> Enclosed Transport</a></li>
+            <li><a href="door-to-door.html"><i class="bi bi-chevron-right"></i> Door-to-Door Delivery</a></li>
+            <li><a href="dealer-transport.html"><i class="bi bi-chevron-right"></i> Dealer Hauling</a></li>
+            <li><a href="shipping-solutions.html#dealer-auction"><i class="bi bi-chevron-right"></i> Auction Shipping</a></li>
+            <li><a href="shipping-solutions.html#luxury-classic"><i class="bi bi-chevron-right"></i> Exotic &amp; Classic</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Logistics &amp; Support</h3>
+          <ul class="footer-links">
+            <li><a href="shipping-process.html"><i class="bi bi-chevron-right"></i> 6-Stage Shipping Process</a></li>
+            <li><a href="shipping-process.html#prep-checklist"><i class="bi bi-chevron-right"></i> Vehicle Prep Checklist</a></li>
+            <li><a href="tracking.html"><i class="bi bi-chevron-right"></i> Live Shipment Tracker</a></li>
+            <li><a href="get-a-quote.html"><i class="bi bi-chevron-right"></i> Instant Quote Calculator</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> Company &amp; Safety Standards</a></li>
+            <li><a href="documentation/index.html"><i class="bi bi-chevron-right"></i> Template Documentation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Operations Center</h3>
+          <p class="small text-muted mb-2">Central Dispatch Desk:</p>
+          <div class="fw-bold text-white mb-2 fs-6">
+            <i class="bi bi-telephone-fill text-primary me-2"></i> (800) 555-ROAD (7623)
+          </div>
+          <div class="small text-muted mb-2">
+            <i class="bi bi-envelope-fill text-primary me-2"></i> dispatch@roadlinkauto.demo
+          </div>
+          <div class="small text-muted mb-3">
+            <i class="bi bi-clock-fill text-primary me-2"></i> 24/7 Nationwide Carrier Operations
+          </div>
+          <a href="contact.html" class="btn btn-outline-light btn-sm-custom">
+            Contact Dispatch Desk <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div class="d-flex flex-wrap align-items-center gap-3">
+          <div class="text-muted small">
+            &copy; 2026 ROADLINK AUTO. All rights reserved.
+          </div>
+          <div class="social-links d-flex align-items-center gap-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X (Twitter)" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html" class="text-muted text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-muted text-decoration-none">Terms of Service</a>
+          <a href="about.html" class="text-muted text-decoration-none">Cookie Policy</a>
+          <a href="404.html" class="text-muted text-decoration-none">System Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Vendor Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <!-- Main Application Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

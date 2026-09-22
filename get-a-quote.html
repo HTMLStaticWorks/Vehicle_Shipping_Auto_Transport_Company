@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Vehicle Transport Quote | ROADLINK AUTO</title>
+  <meta name="description" content="Calculate an instant, all-inclusive auto transport quote. Door-to-door vehicle shipping rates for open and enclosed carriers nationwide. Zero hidden charges.">
+  <meta name="keywords" content="car shipping quote, auto transport calculator, vehicle shipping rates, open vs enclosed shipping cost">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-shield-check text-success me-1"></i> Guaranteed Rate Locks • Full Carrier Insurance Included</span>
+        <span class="text-secondary">|</span>
+        <span><i class="bi bi-clock-history text-warning me-1"></i> 24/7 Operations</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:18005557623" class="text-decoration-none"><i class="bi bi-telephone-fill me-1 text-primary"></i> (800) 555-ROAD</a>
+        <span class="text-secondary">|</span>
+        <a href="tracking.html" class="text-decoration-none"><i class="bi bi-geo-alt-fill text-warning me-1"></i> Track Shipment</a>
+        <span class="text-secondary">|</span>
+        <a href="login.html" class="text-decoration-none"><i class="bi bi-person-fill me-1"></i> Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mandatory Navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light py-2" aria-label="Main Navigation">
+        <a class="navbar-brand" href="index.html" aria-label="RoadLink Auto Home">
+          <svg viewBox="0 0 280 60" height="42" width="196" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(6, 6)">
+              <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+              <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
+              <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+              <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+              <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+              <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+              <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+            <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="currentColor">
+              ROAD<tspan fill="#2563eb">LINK</tspan>
+            </text>
+            <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+            <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+            <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#64748b" letter-spacing="1.2">QUOTE CALCULATOR</text>
+          </svg>
+        </a>
+
+        <!-- Mobile & Tab Header Controls (Hamburger Only) -->
+        <div class="d-xl-none">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 — Transport Portal</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-hdd-network"></i> Home 2 — Logistics Control</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Shipping Solutions
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <li><a class="dropdown-item" href="shipping-solutions.html#nationwide"><i class="bi bi-globe-americas"></i> Nationwide Shipping</a></li>
+                <li><a class="dropdown-item" href="shipping-solutions.html#cross-country"><i class="bi bi-signpost-2-fill"></i> Cross-Country Transport</a></li>
+                <li><a class="dropdown-item" href="shipping-solutions.html#dealer-auction"><i class="bi bi-cash-coin"></i> Dealer &amp; Auction Transport</a></li>
+                <li><a class="dropdown-item" href="shipping-solutions.html#luxury-classic"><i class="bi bi-gem"></i> Luxury &amp; Classic Transport</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="shipping-process.html"><i class="bi bi-diagram-3-fill"></i> Shipping Process</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
+            <li class="nav-item"><a class="nav-link active" href="get-a-quote.html">Get a Quote</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+
+          <!-- Desktop Right Controls (1200px+) -->
+          <div class="d-none d-xl-flex align-items-center gap-2">
+            <button type="button" class="theme-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Toggle RTL mode"><span class="rtl-btn-text">RTL</span></button>
+            <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="bi bi-moon-stars-fill text-primary"></i>
+            </button>
+            <a href="signup.html" class="btn btn-outline-primary btn-sm-custom fw-bold ms-1">Sign Up</a>
+          </div>
+
+          <!-- Mobile & Tab In-Menu Controls: Signup, RTL & Theme Buttons -->
+          <div class="d-xl-none pt-3 mt-3 border-top border-subtle d-flex flex-column gap-2">
+            <a href="signup.html" class="btn btn-primary w-100 fw-bold py-2">
+              <i class="bi bi-person-plus-fill me-1"></i> Sign Up
+            </a>
+            <div class="d-flex align-items-center justify-content-between p-2 rounded-3 bg-subtle border">
+              <span class="small fw-semibold text-muted">Layout &amp; Theme</span>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="theme-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Toggle RTL mode">
+                  <span class="rtl-btn-text">RTL</span>
+                </button>
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+                  <i class="bi bi-moon-stars-fill text-primary"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="py-5 bg-subtle border-bottom">
+    <div class="container text-center max-w-700 mx-auto">
+      <span class="logistics-badge bg-primary text-white mb-2"><i class="bi bi-calculator me-1"></i> Multi-Section Quote Form</span>
+      <h1 class="display-5 fw-bold mb-3">Instant Auto Transport Quote</h1>
+      <p class="text-muted fs-5 mb-0">
+        Transparent door-to-door vehicle shipping rates. No hidden fees, no obligation, and full carrier liability verification.
+      </p>
+    </div>
+  </section>
+
+  <!-- Multi-Section Quote Form -->
+  <section class="section-padding bg-surface">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+          <!-- Alert Target Area for In-Page Notification -->
+          <div class="quote-alert-target"></div>
+
+          <div class="p-4 p-md-5 rounded-4 shadow-xl border bg-surface" style="background: var(--bg-surface-elevated);">
+            <form class="roadlink-quote-form needs-validation" novalidate>
+
+              <!-- Section 1: Pickup Details -->
+              <div class="mb-5 pb-4 border-bottom border-subtle">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-primary rounded-circle p-2 fs-6">1</span>
+                  <h2 class="h5 fw-bold mb-0">Pickup Location</h2>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-7">
+                    <label for="pickupCityZip" class="form-label">
+                      <span>Pickup City or ZIP Code <span class="text-danger">*</span></span>
+                    </label>
+                    <input type="text" class="form-control" id="pickupCityZip" name="pickup_location" placeholder="e.g. Los Angeles, CA or 90001" required>
+                    <div class="invalid-feedback">Please provide a pickup city or 5-digit ZIP code.</div>
+                  </div>
+                  <div class="col-md-5">
+                    <label for="pickupState" class="form-label">
+                      <span>Pickup State <span class="text-danger">*</span></span>
+                    </label>
+                    <select class="form-select" id="pickupState" required>
+                      <option value="" selected disabled>Select State</option>
+                      <option value="CA">California (CA)</option>
+                      <option value="TX">Texas (TX)</option>
+                      <option value="FL">Florida (FL)</option>
+                      <option value="NY">New York (NY)</option>
+                      <option value="IL">Illinois (IL)</option>
+                      <option value="WA">Washington (WA)</option>
+                      <option value="OTHER">Other US State</option>
+                    </select>
+                    <div class="invalid-feedback">Select pickup state.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2: Delivery Details -->
+              <div class="mb-5 pb-4 border-bottom border-subtle">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-cta rounded-circle p-2 fs-6">2</span>
+                  <h2 class="h5 fw-bold mb-0">Delivery Destination</h2>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-7">
+                    <label for="deliveryCityZip" class="form-label">
+                      <span>Delivery City or ZIP Code <span class="text-danger">*</span></span>
+                    </label>
+                    <input type="text" class="form-control" id="deliveryCityZip" name="delivery_location" placeholder="e.g. Dallas, TX or 75001" required>
+                    <div class="invalid-feedback">Please provide a destination city or 5-digit ZIP code.</div>
+                  </div>
+                  <div class="col-md-5">
+                    <label for="deliveryState" class="form-label">
+                      <span>Delivery State <span class="text-danger">*</span></span>
+                    </label>
+                    <select class="form-select" id="deliveryState" required>
+                      <option value="" selected disabled>Select State</option>
+                      <option value="TX">Texas (TX)</option>
+                      <option value="CA">California (CA)</option>
+                      <option value="FL">Florida (FL)</option>
+                      <option value="NY">New York (NY)</option>
+                      <option value="GA">Georgia (GA)</option>
+                      <option value="CO">Colorado (CO)</option>
+                      <option value="OTHER">Other US State</option>
+                    </select>
+                    <div class="invalid-feedback">Select delivery state.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 3: Vehicle Information -->
+              <div class="mb-5 pb-4 border-bottom border-subtle">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-primary rounded-circle p-2 fs-6">3</span>
+                  <h2 class="h5 fw-bold mb-0">Vehicle Specifications</h2>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label for="vehicleYear" class="form-label">Year <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="vehicleYear" placeholder="e.g. 2024" min="1900" max="2027" required>
+                    <div class="invalid-feedback">Enter vehicle model year.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="vehicleMake" class="form-label">Make <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="vehicleMake" placeholder="e.g. Ford, Toyota, BMW" required>
+                    <div class="invalid-feedback">Enter vehicle make.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="vehicleModel" class="form-label">Model <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="vehicleModel" placeholder="e.g. F-150, Camry, X5" required>
+                    <div class="invalid-feedback">Enter vehicle model.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="vehicleBodyType" class="form-label">Vehicle Category</label>
+                    <select class="form-select" id="vehicleBodyType" required>
+                      <option value="sedan" selected>Sedan / Coupe</option>
+                      <option value="suv">SUV / Crossover</option>
+                      <option value="truck">Pickup Truck / Full-Size Van</option>
+                      <option value="classic">Classic / Collector Car</option>
+                      <option value="luxury">Exotic / Luxury Supercar</option>
+                      <option value="motorcycle">Motorcycle</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="vehicleOperable" class="form-label">Operational Status</label>
+                    <select class="form-select" id="vehicleOperable" required>
+                      <option value="running" selected>Operable (Runs, Steers &amp; Brakes)</option>
+                      <option value="inoperable">Inoperable (Requires Winch Loading)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 4: Transport Method & Dates -->
+              <div class="mb-5 pb-4 border-bottom border-subtle">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-cta rounded-circle p-2 fs-6">4</span>
+                  <h2 class="h5 fw-bold mb-0">Carrier Type &amp; Schedule</h2>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Transport Protection Mode</label>
+                    <div class="choice-card-group">
+                      <label class="choice-card is-active">
+                        <input type="radio" name="transport_type" value="Open Carrier" checked>
+                        <i class="bi bi-truck"></i>
+                        <span class="choice-title">Open Carrier</span>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Economical &amp; Reliable</small>
+                      </label>
+                      <label class="choice-card">
+                        <input type="radio" name="transport_type" value="Enclosed Carrier">
+                        <i class="bi bi-shield-shaded"></i>
+                        <span class="choice-title">Enclosed Carrier</span>
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Maximum Protection</small>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="pickupDate" class="form-label">Earliest Available Pickup Date <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="pickupDate" required>
+                    <div class="invalid-feedback">Select estimated available date.</div>
+
+                    <label for="deliveryPref" class="form-label mt-3">Delivery Preference</label>
+                    <select class="form-select" id="deliveryPref">
+                      <option value="standard" selected>Standard Transit (Recommended)</option>
+                      <option value="expedited">Expedited Hotshot (Direct Relay)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 5: Customer Details -->
+              <div class="mb-5 pb-4 border-bottom border-subtle">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-primary rounded-circle p-2 fs-6">5</span>
+                  <h2 class="h5 fw-bold mb-0">Customer Contact Details</h2>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label for="custName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="custName" placeholder="e.g. Jane Doe" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="custEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="custEmail" placeholder="e.g. jane@example.com" required>
+                    <div class="invalid-feedback">Valid email required for quote dispatch.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="custPhone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="custPhone" placeholder="e.g. (555) 000-0000" required>
+                    <div class="invalid-feedback">Phone number required for driver contact.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 6: Additional Information / Notes -->
+              <div class="mb-4">
+                <label for="quoteNotes" class="form-label">
+                  <span>Additional Information / Delivery Notes (Optional)</span>
+                </label>
+                <textarea class="form-control" id="quoteNotes" rows="3" placeholder="e.g. Low ground clearance, modified exhaust, gated community access, auction gate pass number..."></textarea>
+              </div>
+
+              <!-- Submit & Privacy -->
+              <div class="mt-4">
+                <button type="submit" class="btn btn-cta btn-lg-custom w-100 py-3 fs-5">
+                  <i class="bi bi-send-check-fill me-2"></i> Request My Quote
+                </button>
+                <div class="text-center mt-3 small text-muted">
+                  <i class="bi bi-shield-lock-fill text-success me-1"></i> Privacy Reassurance: We never sell your personal information or spam your inbox with unrequested marketing calls.
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Result Modal -->
+  <div class="modal fade" id="quoteResultModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-color);">
+        <div class="modal-header border-bottom border-subtle">
+          <h3 class="modal-title h5 fw-bold" id="quoteModalLabel">
+            <i class="bi bi-check-circle-fill text-success me-2"></i> Instant Quote Generated
+          </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="p-3 rounded mb-3 bg-subtle border">
+            <div class="small text-muted">Corridor:</div>
+            <div class="fw-bold modal-quote-route text-primary fs-5">Origin → Destination</div>
+            <div class="small text-muted mt-2">Carrier Mode: <span class="fw-bold modal-quote-type">Open Carrier</span></div>
+          </div>
+
+          <div class="text-center py-2 mb-3">
+            <small class="text-muted d-block">Estimated Total Route Rate</small>
+            <div class="display-6 fw-bold text-cta modal-quote-price">$940 - $1,160</div>
+            <small class="text-muted">Includes all fuel surcharges, tolls, and cargo insurance.</small>
+          </div>
+
+          <div class="alert alert-secondary small mb-0">
+            <i class="bi bi-info-circle me-1"></i> Front-End Demo: A representative has been simulated to verify exact carrier unit availability on this lane.
+          </div>
+        </div>
+        <div class="modal-footer border-top border-subtle">
+          <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          <a href="tracking.html" class="btn btn-cta">Visit Tracking Portal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="mb-3">
+            <svg viewBox="0 0 280 60" height="38" width="180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(6, 6)">
+                <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
+                <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+                <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+                <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+                <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+                <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+              <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="#ffffff">
+                ROAD<tspan fill="#3b82f6">LINK</tspan>
+              </text>
+              <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+              <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+            </svg>
+          </div>
+          <p class="small text-muted mb-3">
+            “Reliable Vehicle Transport, From Pickup to Delivery.” RoadLink Auto coordinates nationwide auto shipping through verified carrier networks.
+          </p>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-links">
+            <li><a href="open-transport.html"><i class="bi bi-chevron-right"></i> Open Transport</a></li>
+            <li><a href="enclosed-transport.html"><i class="bi bi-chevron-right"></i> Enclosed Transport</a></li>
+            <li><a href="door-to-door.html"><i class="bi bi-chevron-right"></i> Door-to-Door Delivery</a></li>
+            <li><a href="dealer-transport.html"><i class="bi bi-chevron-right"></i> Dealer Hauling</a></li>
+            <li><a href="shipping-solutions.html#dealer-auction"><i class="bi bi-chevron-right"></i> Auction Shipping</a></li>
+            <li><a href="shipping-solutions.html#luxury-classic"><i class="bi bi-chevron-right"></i> Exotic &amp; Classic</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Logistics &amp; Support</h3>
+          <ul class="footer-links">
+            <li><a href="shipping-process.html"><i class="bi bi-chevron-right"></i> 6-Stage Shipping Process</a></li>
+            <li><a href="shipping-process.html#prep-checklist"><i class="bi bi-chevron-right"></i> Vehicle Prep Checklist</a></li>
+            <li><a href="tracking.html"><i class="bi bi-chevron-right"></i> Live Shipment Tracker</a></li>
+            <li><a href="get-a-quote.html"><i class="bi bi-chevron-right"></i> Instant Quote Calculator</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> Company &amp; Safety Standards</a></li>
+            <li><a href="documentation/index.html"><i class="bi bi-chevron-right"></i> Template Documentation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-heading">Operations Center</h3>
+          <p class="small text-muted mb-2">Central Dispatch Desk:</p>
+          <div class="fw-bold text-white mb-2 fs-6">
+            <i class="bi bi-telephone-fill text-primary me-2"></i> (800) 555-ROAD (7623)
+          </div>
+          <div class="small text-muted mb-2">
+            <i class="bi bi-envelope-fill text-primary me-2"></i> dispatch@roadlinkauto.demo
+          </div>
+          <div class="small text-muted mb-3">
+            <i class="bi bi-clock-fill text-primary me-2"></i> 24/7 Operations
+          </div>
+          <a href="contact.html" class="btn btn-outline-light btn-sm-custom">
+            Contact Dispatch Desk <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div class="d-flex flex-wrap align-items-center gap-3">
+          <div class="text-muted small">
+            &copy; 2026 ROADLINK AUTO. All rights reserved.
+          </div>
+          <div class="social-links d-flex align-items-center gap-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X (Twitter)" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html" class="text-muted text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-muted text-decoration-none">Terms of Service</a>
+          <a href="about.html" class="text-muted text-decoration-none">Cookie Policy</a>
+          <a href="404.html" class="text-muted text-decoration-none">System Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

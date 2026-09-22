@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
+  <defs>
+    <linearGradient id="logoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="logoOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Stylized Logistics Carrier / Route Mark -->
+  <g transform="translate(6, 6)">
+    <!-- Outer Shield / Hex Base -->
+    <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    
+    <!-- Vehicle Transport Carrier Silhouette Lines -->
+    <!-- Lower trailer bed -->
+    <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="url(#logoBlue)"/>
+    
+    <!-- Upper carrier tier deck -->
+    <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="url(#logoBlue)" opacity="0.85"/>
+    
+    <!-- Cab Front & Wheels -->
+    <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="url(#logoOrange)"/>
+    <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+    <circle cx="16" cy="34" r="1.5" fill="#0f172a"/>
+    <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+    <circle cx="34" cy="34" r="1.5" fill="#0f172a"/>
+
+    <!-- Fast Route Swoosh Line -->
+    <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="url(#logoOrange)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="43" cy="36.5" r="2.5" fill="#ea580c"/>
+  </g>
+
+  <!-- Typography: ROADLINK AUTO -->
+  <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" letter-spacing="-0.5" class="brand-text-main" fill="currentColor">
+    ROAD<tspan fill="#3b82f6">LINK</tspan>
+  </text>
+  
+  <rect x="180" y="19" width="58" height="17" rx="3" fill="#ea580c" />
+  <text x="186" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10.5" letter-spacing="1" fill="#ffffff">
+    AUTO
+  </text>
+
+  <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="500" font-size="9" letter-spacing="1.5" class="brand-sub-text" fill="#64748b">
+    VEHICLE TRANSPORT LOGISTICS
+  </text>
+</svg>

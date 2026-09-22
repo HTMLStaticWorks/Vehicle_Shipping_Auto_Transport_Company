@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Transport Dashboard — ROADLINK AUTO | Vehicle Logistics</title>
+  <meta name="description" content="Manage vehicle shipping requests, track live shipment status, view pickup and delivery windows, access digital inspection reports, and manage transport payments with RoadLink Auto.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-page text-main d-flex flex-column min-vh-100">
+
+  <!-- Dashboard Header (Brand Logo on left, Hamburger Menu on mobile right) -->
+  <header class="site-header py-2 border-bottom">
+    <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center">
+      <!-- Brand Logo in same position -->
+      <a class="navbar-brand" href="index.html" aria-label="RoadLink Auto Home">
+        <svg viewBox="0 0 280 60" height="42" width="196" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(6, 6)">
+            <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+            <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
+            <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+            <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+            <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+            <circle cx="16" cy="34" r="1.5" fill="#0f172a"/>
+            <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+            <circle cx="34" cy="34" r="1.5" fill="#0f172a"/>
+            <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="currentColor">
+            ROAD<tspan fill="#2563eb">LINK</tspan>
+          </text>
+          <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+          <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+          <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#64748b" letter-spacing="1.2">VEHICLE LOGISTICS</text>
+        </svg>
+      </a>
+
+      <!-- Mobile & Tablet Hamburger Toggle Button (Up to 1024px / xl breakpoint) -->
+      <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#dashboardSidebar" aria-controls="dashboardSidebar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Dashboard Container with Side Menu & Main Workspace -->
+  <div class="container-fluid flex-grow-1 p-0">
+    <div class="row g-0 flex-nowrap min-vh-100-container">
+      
+      <!-- Side Menu Sidebar (Offcanvas on <1200px including 1024px, Column on xl+) -->
+      <aside class="col-xl-2 dashboard-sidebar offcanvas-xl offcanvas-start bg-surface border-end p-3" id="dashboardSidebar" tabindex="-1" aria-labelledby="dashboardSidebarLabel">
+        <!-- Offcanvas Mobile & Tablet Header -->
+        <div class="offcanvas-header d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom d-xl-none">
+          <h5 class="offcanvas-title fw-bold" id="dashboardSidebarLabel">Dashboard Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" data-bs-target="#dashboardSidebar" aria-label="Close"></button>
+        </div>
+
+        <!-- Sidebar Content: Nav Links & Bottom Actions -->
+        <div class="offcanvas-body d-flex flex-column justify-content-between h-100 p-0">
+          <div class="w-100 mb-4">
+            <div class="small text-uppercase text-muted fw-bold mb-3 px-2">Dashboard Navigation</div>
+            <ul class="nav nav-pills dashboard-sidebar-nav flex-column gap-2 w-100" id="dashboardTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-start active" id="tab-active-btn" data-bs-toggle="tab" data-bs-target="#tab-active" type="button" role="tab" data-bs-dismiss="offcanvas" data-bs-target="#dashboardSidebar">
+                  <i class="bi bi-radar me-2"></i> Live Active Shipments (2)
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-start" id="tab-book-btn" data-bs-toggle="tab" data-bs-target="#tab-book" type="button" role="tab" data-bs-dismiss="offcanvas" data-bs-target="#dashboardSidebar">
+                  <i class="bi bi-calendar-plus me-2"></i> Book Transport Request
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-start" id="tab-windows-btn" data-bs-toggle="tab" data-bs-target="#tab-windows" type="button" role="tab" data-bs-dismiss="offcanvas" data-bs-target="#dashboardSidebar">
+                  <i class="bi bi-clock-history me-2"></i> Pickup &amp; Delivery Windows
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-start" id="tab-bol-btn" data-bs-toggle="tab" data-bs-target="#tab-bol" type="button" role="tab" data-bs-dismiss="offcanvas" data-bs-target="#dashboardSidebar">
+                  <i class="bi bi-clipboard-check me-2"></i> Inspection Reports (BOL)
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-start" id="tab-payments-btn" data-bs-toggle="tab" data-bs-target="#tab-payments" type="button" role="tab" data-bs-dismiss="offcanvas" data-bs-target="#dashboardSidebar">
+                  <i class="bi bi-credit-card-2-front me-2"></i> Payments &amp; Invoices
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bottom Actions in Side Menu: Logout + RTL & Theme Buttons -->
+          <div class="w-100 pt-3 border-top mt-auto">
+            <!-- Logout Button -->
+            <a href="index.html" class="btn btn-outline-danger w-100 fw-bold py-2 mb-3 d-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-box-arrow-right fs-5"></i> Logout
+            </a>
+
+            <!-- RTL and Theme Controls (identical to navbar) -->
+            <div class="d-flex align-items-center justify-content-between px-1">
+              <span class="small text-muted fw-semibold">Preferences</span>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="theme-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL mode" title="Toggle RTL mode">
+                  <span class="rtl-btn-text">RTL</span>
+                </button>
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+                  <i class="bi bi-moon-stars-fill text-primary"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Workspace (Right Column on xl+) -->
+      <main class="col-12 col-xl-10 p-3 p-md-4 flex-grow-1 min-w-0">
+
+        <!-- Dashboard Header Banner -->
+        <section class="py-4 bg-surface border rounded-3 mb-4">
+          <div class="container-fluid px-3">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <span class="badge bg-primary text-white"><i class="bi bi-shield-check me-1"></i> Verified Account</span>
+                  <span class="small text-muted">Customer ID: <strong>CUST-80924</strong></span>
+                </div>
+                <h1 class="h3 fw-bold mb-0">Customer Logistics Dashboard</h1>
+                <p class="text-muted small mb-0">Book vehicle shipping, monitor transit status, inspect BOL reports, and manage invoices.</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-cta btn-sm-custom" data-bs-toggle="tab" data-bs-target="#tab-book">
+                  <i class="bi bi-plus-circle-fill me-1"></i> Book Transport Request
+                </button>
+                <a href="tracking.html" class="btn btn-outline-custom btn-sm-custom">
+                  <i class="bi bi-radar me-1"></i> Tracking Portal
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dynamic Alert Container -->
+        <div id="dashboardAlertArea"></div>
+
+        <!-- Quick Metrics Summary -->
+        <div class="row g-3 mb-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dashboard-stat-card">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
+                <span class="small text-muted fw-bold text-truncate me-1">Active Shipments</span>
+                <span class="badge bg-primary-subtle text-primary rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-truck me-1"></i>2 In Transit</span>
+              </div>
+              <div class="h3 fw-bold mb-0">02</div>
+              <div class="small text-muted mt-1">Live telemetry monitoring</div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dashboard-stat-card">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
+                <span class="small text-muted fw-bold text-truncate me-1">Next Pickup / Delivery</span>
+                <span class="badge bg-warning-subtle text-warning rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-clock me-1"></i>Sep 24</span>
+              </div>
+              <div class="h3 fw-bold mb-0">09:00 AM</div>
+              <div class="small text-muted mt-1">Confirmed carrier slot</div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dashboard-stat-card">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
+                <span class="small text-muted fw-bold text-truncate me-1">Inspection Reports</span>
+                <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-file-earmark-check me-1"></i>14 Verified</span>
+              </div>
+              <div class="h3 fw-bold mb-0">14 BOL</div>
+              <div class="small text-muted mt-1">Digital condition logs</div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dashboard-stat-card">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
+                <span class="small text-muted fw-bold text-truncate me-1">Pending Invoices</span>
+                <span class="badge bg-danger-subtle text-danger rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-credit-card me-1"></i>1 Due</span>
+              </div>
+              <div class="h3 fw-bold mb-0">$1,250.00</div>
+              <div class="small text-muted mt-1">Order #RL-2026-04821</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tab-content" id="dashboardTabContent">
+
+        <!-- TAB 1: Live Active Shipments -->
+        <div class="tab-pane fade show active" id="tab-active" role="tabpanel">
+          <div class="card bg-surface border rounded-3 p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 pb-3 border-bottom mb-4">
+              <div>
+                <div class="badge bg-primary text-white mb-1"><i class="bi bi-truck me-1"></i> Primary Consignment</div>
+                <h5 class="fw-bold mb-1">Shipment #RL-2026-04821 — 2024 Ford F-150 SuperCrew</h5>
+                <p class="small text-muted mb-0">Open Carrier Hauling | Route: Los Angeles, CA (90001) &rarr; Dallas, TX (75201)</p>
+              </div>
+              <div class="text-md-end">
+                <span class="badge bg-warning text-dark fs-6 py-2 px-3"><i class="bi bi-arrow-repeat me-1"></i> Stage 04: In Interstate Transit</span>
+                <div class="small text-muted mt-1">Est. Arrival: <strong>Sep 26, 2026 (02:00 PM - 05:00 PM)</strong></div>
+              </div>
+            </div>
+
+            <!-- Visual Stage Timeline -->
+            <div class="mb-4">
+              <h6 class="fw-bold small text-uppercase text-muted mb-3"><i class="bi bi-diagram-3 me-1"></i> Live Transit Stages</h6>
+              <ul class="shipment-timeline">
+                <li class="timeline-step completed">
+                  <div class="timeline-node"><i class="bi bi-check-lg"></i></div>
+                  <div class="timeline-step-title">01. Booking Confirmed</div>
+                  <div class="timeline-step-date">Sep 20, 09:15 AM</div>
+                </li>
+                <li class="timeline-step completed">
+                  <div class="timeline-node"><i class="bi bi-check-lg"></i></div>
+                  <div class="timeline-step-title">02. Carrier Assigned</div>
+                  <div class="timeline-step-date">Sep 21, 02:30 PM</div>
+                </li>
+                <li class="timeline-step completed">
+                  <div class="timeline-node"><i class="bi bi-check-lg"></i></div>
+                  <div class="timeline-step-title">03. Vehicle Pickup &amp; BOL Intake</div>
+                  <div class="timeline-step-date">Sep 22, 10:00 AM</div>
+                </li>
+                <li class="timeline-step active">
+                  <div class="timeline-node"><i class="bi bi-truck"></i></div>
+                  <div class="timeline-step-title">04. In Interstate Transit</div>
+                  <div class="timeline-step-date">Current Position</div>
+                </li>
+                <li class="timeline-step">
+                  <div class="timeline-node"><i class="bi bi-geo-alt"></i></div>
+                  <div class="timeline-step-title">05. Delivery Intake</div>
+                  <div class="timeline-step-date">Est. Sep 26</div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Route Details & Assigned Carrier Card -->
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 bg-subtle rounded-3 border">
+                  <h6 class="fw-bold mb-2"><i class="bi bi-geo-fill text-primary me-1"></i> Corridor Telematics Checkpoint</h6>
+                  <div class="small text-muted mb-1">Current Corridor: <strong>I-10 East (Near El Paso, TX)</strong></div>
+                  <div class="small text-muted mb-1">Speed / Weather: <strong>65 mph | Clear Conditions</strong></div>
+                  <div class="small text-muted">Next Planned Rest Stop: <strong>Abilene Freight Hub (Rest Stop 14)</strong></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-subtle rounded-3 border">
+                  <h6 class="fw-bold mb-2"><i class="bi bi-person-badge-fill text-primary me-1"></i> Assigned Carrier Unit</h6>
+                  <div class="small text-muted mb-1">Driver: <strong>Marcus Vance (Unit #408)</strong></div>
+                  <div class="small text-muted mb-1">Rig: <strong>Kenworth T680 9-Car Hauler</strong></div>
+                  <div class="small text-muted">Direct Phone: <strong>(800) 555-ROAD ext 408</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: Book Vehicle Transport Request -->
+        <div class="tab-pane fade" id="tab-book" role="tabpanel">
+          <div class="card bg-surface border rounded-3 p-4">
+            <h5 class="fw-bold mb-1"><i class="bi bi-calendar-plus text-primary me-2"></i> Book New Vehicle Transport Request</h5>
+            <p class="text-muted small mb-4">Submit vehicle parameters, origin, destination, and preferred shipping window for instant dispatch processing.</p>
+
+            <form id="bookingRequestForm">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="bPickupZip" class="form-label fw-semibold small">Pickup ZIP / Address <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                    <input type="text" class="form-control" id="bPickupZip" placeholder="e.g. 90001 or Los Angeles, CA" required>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="bDropZip" class="form-label fw-semibold small">Delivery ZIP / Address <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-geo-alt-fill text-primary"></i></span>
+                    <input type="text" class="form-control" id="bDropZip" placeholder="e.g. 75201 or Dallas, TX" required>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="bVehicleMake" class="form-label fw-semibold small">Vehicle Make &amp; Model <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="bVehicleMake" placeholder="e.g. 2024 Ford F-150" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="bVehicleType" class="form-label fw-semibold small">Vehicle Body Type <span class="text-danger">*</span></label>
+                  <select class="form-select" id="bVehicleType" required>
+                    <option value="sedan">Sedan / Coupe</option>
+                    <option value="suv">SUV / Crossover</option>
+                    <option value="truck" selected>Pickup Truck / Full-Size SUV</option>
+                    <option value="classic">Classic / Luxury Exotic</option>
+                    <option value="motorcycle">Motorcycle / ATV</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="bTrailerType" class="form-label fw-semibold small">Carrier Type <span class="text-danger">*</span></label>
+                  <select class="form-select" id="bTrailerType" required>
+                    <option value="open" selected>Open Carrier (Standard Savings)</option>
+                    <option value="enclosed">Enclosed Carrier (Climate Shield)</option>
+                    <option value="door">Door-to-Door Dedicated Carrier</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="bPickupDate" class="form-label fw-semibold small">Preferred Pickup Window <span class="text-danger">*</span></label>
+                  <input type="date" class="form-control" id="bPickupDate" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="bOperable" class="form-label fw-semibold small">Vehicle Condition <span class="text-danger">*</span></label>
+                  <select class="form-select" id="bOperable" required>
+                    <option value="yes" selected>Operable (Runs &amp; Drives)</option>
+                    <option value="no">Inoperable (Requires Winch Loading)</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="bNotes" class="form-label fw-semibold small">Special Dispatch Instructions (Optional)</label>
+                  <textarea class="form-control" id="bNotes" rows="3" placeholder="Specify low ground clearance, modified tire widths, gate codes, or narrow residential access notes..."></textarea>
+                </div>
+
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-cta">
+                    <i class="bi bi-check-circle-fill me-1"></i> Submit Transport Booking
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- TAB 3: Pickup & Delivery Windows -->
+        <div class="tab-pane fade" id="tab-windows" role="tabpanel">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card bg-surface border rounded-3 p-4 h-100">
+                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+                  <h6 class="fw-bold mb-0 text-primary"><i class="bi bi-box-arrow-up-right me-1"></i> Pickup Window Specs</h6>
+                  <span class="badge bg-success text-white">Completed</span>
+                </div>
+                <div class="mb-2"><strong>Location:</strong> 1044 S Olive St, Los Angeles, CA 90015</div>
+                <div class="mb-2"><strong>Window Slot:</strong> Sep 22, 2026 (09:00 AM - 11:30 AM)</div>
+                <div class="mb-2"><strong>Intake BOL:</strong> #BOL-LA-9041</div>
+                <div class="mb-3"><strong>Carrier Agent:</strong> Marcus Vance (Driver Verified ID)</div>
+                <div class="p-3 bg-subtle rounded-3 small">
+                  <i class="bi bi-info-circle text-primary me-1"></i> Residential access cleared. Driver performed 8-point physical walkaround inspection prior to ramp loading.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card bg-surface border rounded-3 p-4 h-100">
+                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
+                  <h6 class="fw-bold mb-0 text-primary"><i class="bi bi-box-arrow-in-down-right me-1"></i> Scheduled Delivery Window</h6>
+                  <span class="badge bg-warning text-dark">Confirmed Slot</span>
+                </div>
+                <div class="mb-2"><strong>Destination:</strong> 450 N Harwood St, Dallas, TX 75201</div>
+                <div class="mb-2"><strong>Target Window:</strong> Sep 26, 2026 (02:00 PM - 05:00 PM)</div>
+                <div class="mb-2"><strong>Delivery Contact:</strong> (800) 555-ROAD ext 408</div>
+                <div class="mb-3"><strong>Pre-Arrival Notice:</strong> Driver will call 2 hours prior to arrival</div>
+                <div class="p-3 bg-subtle rounded-3 small">
+                  <i class="bi bi-truck-front text-primary me-1"></i> Unloading clearance verified. Consignee signature and physical BOL release required upon keys handover.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: Inspection Reports (BOL) -->
+        <div class="tab-pane fade" id="tab-bol" role="tabpanel">
+          <div class="card bg-surface border rounded-3 p-4">
+            <h5 class="fw-bold mb-1"><i class="bi bi-clipboard-check text-primary me-2"></i> Bill of Lading (BOL) &amp; Condition Reports</h5>
+            <p class="text-muted small mb-4">View digital condition scorecards logged by certified carrier inspectors during intake and release.</p>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="bol-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold">Intake Inspection #BOL-LA-9041</span>
+                    <span class="badge bg-success">Verified Intake</span>
+                  </div>
+                  <div class="small text-muted mb-2">Vehicle: <strong>2024 Ford F-150 SuperCrew</strong></div>
+                  <div class="small text-muted mb-2">Odometer Logged: <strong>12,480 Miles</strong></div>
+                  <div class="small text-muted mb-3">Pre-Existing Notes: <em>Minor stone chip on lower front bumper lip. Zero glass cracks.</em></div>
+                  <button class="btn btn-outline-custom btn-sm-custom w-100" data-bs-toggle="modal" data-bs-target="#bolModal">
+                    <i class="bi bi-file-earmark-pdf me-1"></i> View Full Condition Report
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="bol-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold">Historical Inspection #BOL-NY-3302</span>
+                    <span class="badge bg-secondary">Archived (Aug 2026)</span>
+                  </div>
+                  <div class="small text-muted mb-2">Vehicle: <strong>2022 Chevrolet Tahoe RST</strong></div>
+                  <div class="small text-muted mb-2">Odometer Logged: <strong>28,150 Miles</strong></div>
+                  <div class="small text-muted mb-3">Delivery Status: <strong>Delivered Intact &amp; Signed</strong></div>
+                  <button class="btn btn-outline-custom btn-sm-custom w-100" data-bs-toggle="modal" data-bs-target="#bolModal">
+                    <i class="bi bi-file-earmark-pdf me-1"></i> View Archived Report
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: Payments & Invoices -->
+        <div class="tab-pane fade" id="tab-payments" role="tabpanel">
+          <div class="card bg-surface border rounded-3 p-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-4 pb-3 border-bottom">
+              <div>
+                <h5 class="fw-bold mb-1"><i class="bi bi-credit-card-2-front text-primary me-2"></i> Payments &amp; Invoicing Center</h5>
+                <p class="text-muted small mb-0">View transport invoices, download receipts, and complete carrier balances.</p>
+              </div>
+              <button class="btn btn-cta btn-sm-custom pay-now-btn" data-invoice-id="INV-8842" data-invoice-amount="$1,250.00">
+                <i class="bi bi-credit-card me-1"></i> Pay Pending Invoice ($1,250.00)
+              </button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Transport Order</th>
+                    <th>Date Issued</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th class="text-end">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong class="text-primary">#INV-8842</strong></td>
+                    <td>LA &rarr; Dallas (2024 Ford F-150)</td>
+                    <td>Sep 20, 2026</td>
+                    <td class="fw-bold">$1,250.00</td>
+                    <td><span class="badge bg-danger-subtle text-danger"><i class="bi bi-clock me-1"></i> Payment Due</span></td>
+                    <td class="text-end">
+                      <button class="btn btn-cta btn-sm-custom pay-now-btn" data-invoice-id="INV-8842" data-invoice-amount="$1,250.00">
+                        Pay Now
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong class="text-primary">#INV-7701</strong></td>
+                    <td>NY &rarr; Miami (2022 Chevrolet Tahoe)</td>
+                    <td>Aug 14, 2026</td>
+                    <td class="fw-bold">$1,450.00</td>
+                    <td><span class="badge bg-success-subtle text-success"><i class="bi bi-check-circle me-1"></i> Paid</span></td>
+                    <td class="text-end">
+                      <button class="btn btn-outline-custom btn-sm-custom" onclick="alert('Downloading Receipt #RCP-2026-7701...');">
+                        <i class="bi bi-download me-1"></i> Receipt
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+  <!-- BOL Inspection Modal -->
+  <div class="modal fade" id="bolModal" tabindex="-1" aria-labelledby="bolModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="bolModalLabel"><i class="bi bi-clipboard-check text-primary me-2"></i> Digital Bill of Lading (BOL) #BOL-LA-9041</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="p-3 bg-subtle rounded border">
+                <div class="small text-muted">Vehicle Details:</div>
+                <div class="fw-bold">2024 Ford F-150 SuperCrew</div>
+                <div class="small text-muted mt-1">VIN: <strong>1FTFW1ED4RFC****</strong></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-subtle rounded border">
+                <div class="small text-muted">Intake Verification:</div>
+                <div class="fw-bold text-success"><i class="bi bi-shield-check"></i> Passed Ramp Safety Inspection</div>
+                <div class="small text-muted mt-1">Inspector: <strong>Marcus Vance (Carrier #408)</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <h6 class="fw-bold mb-2">Recorded Inspection Checklist:</h6>
+          <ul class="list-group list-group-flush small mb-4 border rounded">
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+              <span>Front Bumper &amp; Grille</span>
+              <span class="badge bg-warning text-dark">Minor stone chip</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+              <span>Windshield &amp; Roof Glass</span>
+              <span class="badge bg-success">100% Intact</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+              <span>Tire Tread &amp; Pressure</span>
+              <span class="badge bg-success">Secured via Over-Tire Straps</span>
+            </li>
+            <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center">
+              <span>Odometer Intake Log</span>
+              <span class="badge bg-primary">12,480 Miles</span>
+            </li>
+          </ul>
+
+          <div class="p-3 bg-subtle rounded small">
+            <i class="bi bi-check2-circle text-success me-1"></i> Digital signature confirmed by customer at pickup. Hard copy archived in central dispatch repository.
+          </div>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-outline-custom btn-sm-custom" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary-custom btn-sm-custom" onclick="alert('Downloading BOL PDF document...');">
+            <i class="bi bi-download me-1"></i> Download Official BOL PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Simulation Modal -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-surface border">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="paymentModalLabel"><i class="bi bi-credit-card text-primary me-2"></i> Transport Payment Checkout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="p-3 bg-subtle rounded mb-4 d-flex justify-content-between align-items-center border">
+            <div>
+              <div class="small text-muted">Invoice Reference:</div>
+              <strong class="modal-invoice-id">INV-8842</strong>
+            </div>
+            <div class="text-end">
+              <div class="small text-muted">Total Due:</div>
+              <strong class="text-primary fs-5 modal-invoice-amount">$1,250.00</strong>
+            </div>
+          </div>
+
+          <form id="processPaymentForm">
+            <div class="mb-3">
+              <label class="form-label fw-semibold small">Cardholder Name</label>
+              <input type="text" class="form-control" value="Johnathan Vance" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold small">Card Number</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
+                <input type="text" class="form-control" value="•••• •••• •••• 4242" required>
+              </div>
+            </div>
+            <div class="row g-2 mb-4">
+              <div class="col-6">
+                <label class="form-label fw-semibold small">Expiry Date</label>
+                <input type="text" class="form-control" placeholder="MM/YY" value="12/28" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label fw-semibold small">CVV Code</label>
+                <input type="password" class="form-control" placeholder="123" value="884" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-cta w-100 py-2">
+              <i class="bi bi-shield-check me-1"></i> Pay Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Core JS Libraries -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
