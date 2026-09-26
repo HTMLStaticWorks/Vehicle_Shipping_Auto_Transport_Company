@@ -25,25 +25,6 @@
 </head>
 <body>
 
-  <!-- ==========================================================================
-       TOP LOGISTICS STATUS BAR
-       ========================================================================== -->
-  <div class="top-bar d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-3">
-        <span><i class="bi bi-shield-check text-success me-1"></i> FMCSA Verified Carrier Network</span>
-        <span class="text-secondary">|</span>
-        <span><i class="bi bi-clock-history text-warning me-1"></i> 24/7 Nationwide Dispatch Operations</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <a href="tel:18005557623" class="text-decoration-none"><i class="bi bi-telephone-fill me-1 text-primary"></i> (800) 555-ROAD</a>
-        <span class="text-secondary">|</span>
-        <a href="tracking.html" class="text-decoration-none"><i class="bi bi-geo-alt-fill text-warning me-1"></i> Track Shipment</a>
-        <span class="text-secondary">|</span>
-        <a href="login.html" class="text-decoration-none"><i class="bi bi-person-fill me-1"></i> Sign In</a>
-      </div>
-    </div>
-  </div>
 
   <!-- ==========================================================================
        MANDATORY STICKY NAVBAR
@@ -95,6 +76,11 @@
               </ul>
             </li>
 
+            <!-- About Menu (next to Home) -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
             <!-- Shipping Solutions Dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -116,9 +102,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="get-a-quote.html">Get a Quote</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -176,7 +159,7 @@
           <p class="hero-description">
             RoadLink Auto delivers seamless, professional vehicle transportation across all 50 states. From single luxury vehicles to multi-car dealer inventory, experience transparent carrier scheduling, door-to-door convenience, and real-time shipment visibility.
           </p>
-          <div class="d-flex flex-wrap gap-3 mb-4">
+          <div class="hero-btn-group mb-4">
             <a href="get-a-quote.html" class="btn btn-cta btn-lg-custom">
               <i class="bi bi-arrow-right-circle-fill"></i> Get a Free Quote
             </a>
@@ -585,7 +568,7 @@
 
           <div class="tracking-search-box mb-4">
             <form class="shipment-tracking-form">
-              <label for="homeTrackingInput" class="form-label">
+              <label for="homeTrackingInput" class="form-label d-flex justify-content-between align-items-center flex-wrap gap-1">
                 <span>Shipment Tracking ID</span>
                 <span class="text-muted small">Demo ID: <code class="text-primary fw-bold">RL-2026-04821</code></span>
               </label>
@@ -961,7 +944,7 @@
           <p class="text-light opacity-75 mb-4 fs-5">
             Get an instant, competitive auto shipping quote today with zero hidden charges and full carrier insurance verification.
           </p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
+          <div class="cta-btn-group justify-content-center">
             <a href="get-a-quote.html" class="btn btn-cta btn-lg-custom">
               <i class="bi bi-calculator-fill"></i> Get a Free Quote Now
             </a>
@@ -1020,22 +1003,27 @@
         <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
           <div class="mb-3">
-            <svg viewBox="0 0 280 60" height="38" width="180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(6, 6)">
-                <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-                <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
-                <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
-                <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
-                <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
-                <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
-                <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
-              </g>
-              <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="#ffffff">
-                ROAD<tspan fill="#3b82f6">LINK</tspan>
-              </text>
-              <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
-              <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
-            </svg>
+            <a href="index.html" class="d-inline-block" aria-label="RoadLink Auto Home">
+              <svg viewBox="0 0 280 60" height="42" width="196" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(6, 6)">
+                  <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+                  <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#3b82f6"/>
+                  <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+                  <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+                  <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+                  <circle cx="16" cy="34" r="1.5" fill="#0f172a"/>
+                  <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+                  <circle cx="34" cy="34" r="1.5" fill="#0f172a"/>
+                  <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="#ffffff">
+                  ROAD<tspan fill="#3b82f6">LINK</tspan>
+                </text>
+                <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+                <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+                <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#94a3b8" letter-spacing="1.2">VEHICLE LOGISTICS</text>
+              </svg>
+            </a>
           </div>
           <p class="small text-muted mb-3">
             “Reliable Vehicle Transport, From Pickup to Delivery.” RoadLink Auto coordinates nationwide auto shipping through verified carrier networks with real-time shipment transparency.

@@ -18,23 +18,6 @@
 </head>
 <body>
 
-  <!-- Top Bar -->
-  <div class="top-bar d-none d-md-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-3">
-        <span><i class="bi bi-clock-history text-warning me-1"></i> Central Dispatch Desk: 24/7 Support Available</span>
-        <span class="text-secondary">|</span>
-        <span><i class="bi bi-shield-check text-success me-1"></i> FMCSA Verified Network</span>
-      </div>
-      <div class="d-flex align-items-center gap-3">
-        <a href="tel:18005557623" class="text-decoration-none"><i class="bi bi-telephone-fill me-1 text-primary"></i> (800) 555-ROAD</a>
-        <span class="text-secondary">|</span>
-        <a href="tracking.html" class="text-decoration-none"><i class="bi bi-geo-alt-fill text-warning me-1"></i> Track Shipment</a>
-        <span class="text-secondary">|</span>
-        <a href="login.html" class="text-decoration-none"><i class="bi bi-person-fill me-1"></i> Sign In</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Mandatory Navbar -->
   <header class="site-header">
@@ -56,7 +39,7 @@
             </text>
             <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
             <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
-            <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#64748b" letter-spacing="1.2">DISPATCH &amp; CONTACT</text>
+            <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#64748b" letter-spacing="1.2">VEHICLE LOGISTICS</text>
           </svg>
         </a>
 
@@ -79,6 +62,10 @@
               </ul>
             </li>
 
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Shipping Solutions
@@ -95,7 +82,6 @@
 
             <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
             <li class="nav-item"><a class="nav-link" href="get-a-quote.html">Get a Quote</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
             <li class="nav-item">
               <a class="nav-link" href="dashboard.html">Dashboard</a>
@@ -291,28 +277,61 @@
     </div>
   </section>
 
-  <!-- Global Footer -->
-  <footer class="site-footer bg-surface border-top border-subtle pt-5 pb-4">
+  <!-- Interactive Map Section -->
+  <section class="pb-5 bg-surface">
     <div class="container">
-      <div class="row g-4 pb-4 border-bottom border-subtle">
+      <div class="p-3 bg-surface-elevated rounded-4 border shadow-sm mb-4">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+          <div>
+            <h3 class="h5 fw-bold mb-0 text-heading"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Central Logistics Headquarters</h3>
+            <span class="small text-muted">1044 S Olive St, Los Angeles, CA 90015 • Nationwide Dispatch &amp; Terminal Operations</span>
+          </div>
+          <span class="badge bg-success-subtle text-success py-2 px-3 rounded-pill"><i class="bi bi-shield-check me-1"></i> 24/7 Monitored Facility</span>
+        </div>
+        <div class="rounded-3 overflow-hidden border shadow-inner" style="height: 380px;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7332483863486!2d-118.24368492348507!3d34.05035297315671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c64b5952d703%3A0x6a2c2621ad972986!2sLos%20Angeles%2C%20CA%2090012!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="RoadLink Auto Headquarters Map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
-          <div class="footer-brand mb-3">
-            <svg viewBox="0 0 280 60" height="42" width="196" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(6, 6)">
-                <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-                <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#2563eb"/>
-                <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
-                <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
-                <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
-                <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
-                <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
-              </g>
-              <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="currentColor">
-                ROAD<tspan fill="#3b82f6">LINK</tspan>
-              </text>
-              <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
-              <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
-            </svg>
+          <div class="mb-3">
+            <a href="index.html" class="d-inline-block" aria-label="RoadLink Auto Home">
+              <svg viewBox="0 0 280 60" height="42" width="196" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(6, 6)">
+                  <path d="M 24 2 L 44 14 L 44 34 L 24 46 L 4 34 L 4 14 Z" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+                  <path d="M 10 32 L 38 32 L 36 24 L 20 24 Z" fill="#3b82f6"/>
+                  <path d="M 13 21 L 35 21 L 33 16 L 16 16 Z" fill="#3b82f6" opacity="0.85"/>
+                  <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
+                  <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
+                  <circle cx="16" cy="34" r="1.5" fill="#0f172a"/>
+                  <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+                  <circle cx="34" cy="34" r="1.5" fill="#0f172a"/>
+                  <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="#ffffff">
+                  ROAD<tspan fill="#3b82f6">LINK</tspan>
+                </text>
+                <rect x="180" y="19" width="56" height="17" rx="3" fill="#ea580c"/>
+                <text x="185" y="31.5" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="10" fill="#ffffff" letter-spacing="1">AUTO</text>
+                <text x="65" y="47" font-family="'Inter', sans-serif" font-weight="600" font-size="8.5" fill="#94a3b8" letter-spacing="1.2">VEHICLE LOGISTICS</text>
+              </svg>
+            </a>
           </div>
           <p class="small text-muted mb-3">
             “Reliable Vehicle Transport, From Pickup to Delivery.” RoadLink Auto coordinates nationwide auto shipping through verified carrier networks with real-time shipment transparency.
@@ -323,6 +342,7 @@
           </div>
         </div>
 
+        <!-- Col 2: Services -->
         <div class="col-lg-2 col-md-6">
           <h3 class="footer-heading">Services</h3>
           <ul class="footer-links">
@@ -330,32 +350,38 @@
             <li><a href="enclosed-transport.html"><i class="bi bi-chevron-right"></i> Enclosed Transport</a></li>
             <li><a href="door-to-door.html"><i class="bi bi-chevron-right"></i> Door-to-Door Delivery</a></li>
             <li><a href="dealer-transport.html"><i class="bi bi-chevron-right"></i> Dealer Hauling</a></li>
+            <li><a href="shipping-solutions.html#dealer-auction"><i class="bi bi-chevron-right"></i> Auction Shipping</a></li>
+            <li><a href="shipping-solutions.html#luxury-classic"><i class="bi bi-chevron-right"></i> Exotic &amp; Classic</a></li>
           </ul>
         </div>
 
+        <!-- Col 3: Resources -->
         <div class="col-lg-3 col-md-6">
           <h3 class="footer-heading">Logistics &amp; Support</h3>
           <ul class="footer-links">
             <li><a href="shipping-process.html"><i class="bi bi-chevron-right"></i> 6-Stage Shipping Process</a></li>
+            <li><a href="shipping-process.html#prep-checklist"><i class="bi bi-chevron-right"></i> Vehicle Prep Checklist</a></li>
             <li><a href="tracking.html"><i class="bi bi-chevron-right"></i> Live Shipment Tracker</a></li>
             <li><a href="get-a-quote.html"><i class="bi bi-chevron-right"></i> Instant Quote Calculator</a></li>
             <li><a href="about.html"><i class="bi bi-chevron-right"></i> Company &amp; Safety Standards</a></li>
+            <li><a href="documentation/index.html"><i class="bi bi-chevron-right"></i> Template Documentation</a></li>
           </ul>
         </div>
 
+        <!-- Col 4: Contact Operations -->
         <div class="col-lg-3 col-md-6">
           <h3 class="footer-heading">Operations Center</h3>
           <p class="small text-muted mb-2">Central Dispatch &amp; Customer Support:</p>
-          <div class="fw-bold text-heading mb-2 fs-6">
+          <div class="fw-bold text-white mb-2 fs-6">
             <i class="bi bi-telephone-fill text-primary me-2"></i> (800) 555-ROAD (7623)
           </div>
           <div class="small text-muted mb-2">
             <i class="bi bi-envelope-fill text-primary me-2"></i> dispatch@roadlinkauto.demo
           </div>
           <div class="small text-muted mb-3">
-            <i class="bi bi-clock-fill text-primary me-2"></i> 24/7 Operations
+            <i class="bi bi-clock-fill text-primary me-2"></i> 24/7 Nationwide Carrier Operations
           </div>
-          <a href="contact.html" class="btn btn-outline-custom btn-sm-custom">
+          <a href="contact.html" class="btn btn-outline-light btn-sm-custom">
             Contact Dispatch Desk <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -375,10 +401,9 @@
           </div>
         </div>
         <div class="d-flex gap-3 small">
-          <a href="about.html" class="text-muted text-decoration-none">Privacy Policy</a>
-          <a href="about.html" class="text-muted text-decoration-none">Terms of Service</a>
-          <a href="about.html" class="text-muted text-decoration-none">Cookie Policy</a>
-          <a href="404.html" class="text-muted text-decoration-none">System Status</a>
+          <a href="about.html" class="text-muted text-decoration-none">About Us</a>
+          <a href="contact.html" class="text-muted text-decoration-none">Contact Support</a>
+          <a href="dashboard.html" class="text-muted text-decoration-none">Customer Portal</a>
         </div>
       </div>
     </div>

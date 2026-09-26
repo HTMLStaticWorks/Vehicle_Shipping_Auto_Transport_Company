@@ -150,10 +150,10 @@
         <!-- Dynamic Alert Container -->
         <div id="dashboardAlertArea"></div>
 
-        <!-- Quick Metrics Summary -->
+        <!-- Quick Metrics Summary (2x2 Grid on 1024px / lg) -->
         <div class="row g-3 mb-4">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="dashboard-stat-card">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+            <div class="dashboard-stat-card h-100">
               <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
                 <span class="small text-muted fw-bold text-truncate me-1">Active Shipments</span>
                 <span class="badge bg-primary-subtle text-primary rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-truck me-1"></i>2 In Transit</span>
@@ -163,8 +163,8 @@
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="dashboard-stat-card">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+            <div class="dashboard-stat-card h-100">
               <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
                 <span class="small text-muted fw-bold text-truncate me-1">Next Pickup / Delivery</span>
                 <span class="badge bg-warning-subtle text-warning rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-clock me-1"></i>Sep 24</span>
@@ -174,8 +174,8 @@
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="dashboard-stat-card">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+            <div class="dashboard-stat-card h-100">
               <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
                 <span class="small text-muted fw-bold text-truncate me-1">Inspection Reports</span>
                 <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-file-earmark-check me-1"></i>14 Verified</span>
@@ -185,8 +185,8 @@
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="dashboard-stat-card">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+            <div class="dashboard-stat-card h-100">
               <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 mb-2">
                 <span class="small text-muted fw-bold text-truncate me-1">Pending Invoices</span>
                 <span class="badge bg-danger-subtle text-danger rounded-pill px-2 py-1 text-nowrap"><i class="bi bi-credit-card me-1"></i>1 Due</span>
@@ -250,19 +250,23 @@
             <!-- Route Details & Assigned Carrier Card -->
             <div class="row g-3">
               <div class="col-md-6">
-                <div class="p-3 bg-subtle rounded-3 border">
-                  <h6 class="fw-bold mb-2"><i class="bi bi-geo-fill text-primary me-1"></i> Corridor Telematics Checkpoint</h6>
-                  <div class="small text-muted mb-1">Current Corridor: <strong>I-10 East (Near El Paso, TX)</strong></div>
-                  <div class="small text-muted mb-1">Speed / Weather: <strong>65 mph | Clear Conditions</strong></div>
-                  <div class="small text-muted">Next Planned Rest Stop: <strong>Abilene Freight Hub (Rest Stop 14)</strong></div>
+                <div class="p-3 bg-subtle rounded-3 border h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <h6 class="fw-bold mb-2"><i class="bi bi-geo-fill text-primary me-1"></i> Corridor Telematics Checkpoint</h6>
+                    <div class="small text-muted mb-1">Current Corridor: <strong>I-10 East (Near El Paso, TX)</strong></div>
+                    <div class="small text-muted mb-1">Speed / Weather: <strong>65 mph | Clear Conditions</strong></div>
+                  </div>
+                  <div class="small text-muted mt-2 pt-2 border-top border-subtle">Next Planned Rest Stop: <strong>Abilene Freight Hub (Rest Stop 14)</strong></div>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="p-3 bg-subtle rounded-3 border">
-                  <h6 class="fw-bold mb-2"><i class="bi bi-person-badge-fill text-primary me-1"></i> Assigned Carrier Unit</h6>
-                  <div class="small text-muted mb-1">Driver: <strong>Marcus Vance (Unit #408)</strong></div>
-                  <div class="small text-muted mb-1">Rig: <strong>Kenworth T680 9-Car Hauler</strong></div>
-                  <div class="small text-muted">Direct Phone: <strong>(800) 555-ROAD ext 408</strong></div>
+                <div class="p-3 bg-subtle rounded-3 border h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <h6 class="fw-bold mb-2"><i class="bi bi-person-badge-fill text-primary me-1"></i> Assigned Carrier Unit</h6>
+                    <div class="small text-muted mb-1">Driver: <strong>Marcus Vance (Unit #408)</strong></div>
+                    <div class="small text-muted mb-1">Rig: <strong>Kenworth T680 9-Car Hauler</strong></div>
+                  </div>
+                  <div class="small text-muted mt-2 pt-2 border-top border-subtle">Direct Phone: <strong>(800) 555-ROAD ext 408</strong></div>
                 </div>
               </div>
             </div>
