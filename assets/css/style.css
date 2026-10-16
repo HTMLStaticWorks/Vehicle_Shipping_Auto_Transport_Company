@@ -599,6 +599,56 @@ svg text[fill="currentColor"] {
   border-color: rgba(59, 130, 246, 0.4);
 }
 
+/* High Contrast Card Overlay Badges for photographic image containers */
+.card-badge-high-contrast {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: #090d16 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 3;
+}
+
+.card-badge-high-contrast.badge-primary-contrast {
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.card-badge-high-contrast.badge-orange-contrast {
+  background: #ea580c !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.card-badge-high-contrast.badge-dark-contrast {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.card-img-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* --------------------------------------------------------------------------
    6. Hero Sections (Home & Home 2)
    -------------------------------------------------------------------------- */

@@ -71,8 +71,8 @@
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item active" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 — Transport Portal</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-hdd-network"></i> Home 2 — Logistics Control</a></li>
+                <li><a class="dropdown-item active" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 (Auto Transport Hub)</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-layers-fill"></i> Home 2 (Alternative Layout)</a></li>
               </ul>
             </li>
 
@@ -81,19 +81,12 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
 
-            <!-- Shipping Solutions Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Shipping Solutions
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <li><a class="dropdown-item" href="shipping-solutions.html#nationwide"><i class="bi bi-globe-americas"></i> Nationwide Shipping</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#cross-country"><i class="bi bi-signpost-2-fill"></i> Cross-Country Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#dealer-auction"><i class="bi bi-cash-coin"></i> Dealer &amp; Auction Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#luxury-classic"><i class="bi bi-gem"></i> Luxury &amp; Classic Transport</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="shipping-process.html"><i class="bi bi-diagram-3-fill"></i> Shipping Process</a></li>
-              </ul>
+            <!-- Direct Services & Shipping Process Links (Dropdown removed) -->
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shipping-process.html">Shipping Process</a>
             </li>
 
             <!-- Single Nav Links -->
@@ -350,7 +343,8 @@
           <div class="card-custom">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/open-carrier.jpg" alt="Open Auto Transport Carrier" class="img-cover">
-              <span class="position-absolute top-0 start-0 m-3 logistics-badge bg-primary text-white">Most Popular</span>
+              <div class="card-img-gradient-overlay"></div>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-primary-contrast"><i class="bi bi-star-fill text-warning me-1"></i> Most Popular</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge">
@@ -368,12 +362,13 @@
           </div>
         </div>
 
-        <!-- Service 2: Enclosed Auto Transport -->
+        <!-- Service 2: Enclosed Auto Transport (High-contrast fix on 2nd image) -->
         <div class="col-md-6 col-lg-6 col-xl-4 gsap-reveal">
           <div class="card-custom">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/enclosed-carrier.jpg" alt="Enclosed Luxury Auto Transport" class="img-cover">
-              <span class="position-absolute top-0 start-0 m-3 logistics-badge badge-scheduled">Premium Protection</span>
+              <div class="card-img-gradient-overlay"></div>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-dark-contrast"><i class="bi bi-shield-lock-fill text-warning me-1"></i> Premium Protection</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge orange">
@@ -396,6 +391,8 @@
           <div class="card-custom">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/door-to-door.jpg" alt="Door to Door Vehicle Delivery" class="img-cover">
+              <div class="card-img-gradient-overlay"></div>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast"><i class="bi bi-house-door-fill text-primary me-1"></i> Direct Driveway</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge">
@@ -418,6 +415,8 @@
           <div class="card-custom">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/dealer-transport.jpg" alt="Dealer Multi-car Transport" class="img-cover">
+              <div class="card-img-gradient-overlay"></div>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast"><i class="bi bi-buildings text-primary me-1"></i> Dealer &amp; Fleet</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge">
@@ -440,6 +439,8 @@
           <div class="card-custom">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/auction-transport.jpg" alt="Auto Auction Staging Yard" class="img-cover">
+              <div class="card-img-gradient-overlay"></div>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-orange-contrast"><i class="bi bi-hammer text-white me-1"></i> Auction Dispatch</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge orange">
@@ -451,7 +452,7 @@
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
                 <span class="small fw-semibold text-muted">Gate Pass Handling</span>
-                <a href="shipping-solutions.html#dealer-auction" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
+                <a href="services.html" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -462,6 +463,8 @@
           <div class="card-custom">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/luxury-transport.jpg" alt="Exotic Luxury Vehicle Shipping" class="img-cover">
+              <div class="card-img-gradient-overlay"></div>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-dark-contrast"><i class="bi bi-gem text-warning me-1"></i> White-Glove Care</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge">
@@ -473,7 +476,7 @@
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
                 <span class="small fw-semibold text-muted">Zero-Angle Loading</span>
-                <a href="shipping-solutions.html#luxury-classic" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
+                <a href="services.html" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -503,6 +506,9 @@
         <!-- Step 1 -->
         <div class="col-sm-6 col-lg-6 col-xl-3 gsap-reveal">
           <div class="step-card-connected">
+            <div class="rounded-3 overflow-hidden mb-3 border shadow-sm" style="height: 120px;">
+              <img src="assets/images/logistics/route-hub.jpg" alt="Instant Transport Quote Calculator" class="img-cover">
+            </div>
             <div class="step-number">01</div>
             <h3 class="h5 fw-bold mb-2">Request a Quote</h3>
             <p class="text-muted small mb-0">
@@ -514,6 +520,9 @@
         <!-- Step 2 -->
         <div class="col-sm-6 col-lg-6 col-xl-3 gsap-reveal">
           <div class="step-card-connected">
+            <div class="rounded-3 overflow-hidden mb-3 border shadow-sm" style="height: 120px;">
+              <img src="assets/images/trucks/carrier-fleet.jpg" alt="Verified Carrier Scheduling" class="img-cover">
+            </div>
             <div class="step-number">02</div>
             <h3 class="h5 fw-bold mb-2">Schedule Pickup</h3>
             <p class="text-muted small mb-0">
@@ -525,6 +534,9 @@
         <!-- Step 3 -->
         <div class="col-sm-6 col-lg-6 col-xl-3 gsap-reveal">
           <div class="step-card-connected">
+            <div class="rounded-3 overflow-hidden mb-3 border shadow-sm" style="height: 120px;">
+              <img src="assets/images/transport/loading.jpg" alt="Vehicle Loading and Real-Time Tracking" class="img-cover">
+            </div>
             <div class="step-number">03</div>
             <h3 class="h5 fw-bold mb-2">Track Your Vehicle</h3>
             <p class="text-muted small mb-0">
@@ -536,6 +548,9 @@
         <!-- Step 4 -->
         <div class="col-sm-6 col-lg-6 col-xl-3 gsap-reveal">
           <div class="step-card-connected">
+            <div class="rounded-3 overflow-hidden mb-3 border shadow-sm" style="height: 120px;">
+              <img src="assets/images/transport/inspection.jpg" alt="Final Delivery Walkaround Inspection" class="img-cover">
+            </div>
             <div class="step-number">04</div>
             <h3 class="h5 fw-bold mb-2">Receive &amp; Inspect</h3>
             <p class="text-muted small mb-0">

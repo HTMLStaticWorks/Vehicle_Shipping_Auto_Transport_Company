@@ -57,8 +57,8 @@
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 — Transport Portal</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-hdd-network"></i> Home 2 — Logistics Control</a></li>
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 (Auto Transport Hub)</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-hdd-network"></i> Home 2 (Alternative Layout)</a></li>
               </ul>
             </li>
 
@@ -67,18 +67,11 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Shipping Solutions
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <li><a class="dropdown-item" href="shipping-solutions.html#nationwide"><i class="bi bi-globe-americas"></i> Nationwide Shipping</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#cross-country"><i class="bi bi-signpost-2-fill"></i> Cross-Country Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#dealer-auction"><i class="bi bi-cash-coin"></i> Dealer &amp; Auction Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#luxury-classic"><i class="bi bi-gem"></i> Luxury &amp; Classic Transport</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="shipping-process.html"><i class="bi bi-diagram-3-fill"></i> Shipping Process</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shipping-process.html">Shipping Process</a>
             </li>
 
             <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
@@ -198,28 +191,54 @@
             </div>
           </div>
 
+          <!-- Visual Delivery Protocols -->
+          <div class="row g-4 my-2">
+            <div class="col-md-6">
+              <div class="rounded-4 overflow-hidden border bg-surface h-100 shadow-sm">
+                <div style="height: 180px; overflow: hidden;">
+                  <img src="assets/images/transport/loading.jpg" alt="Vehicle loading onto carrier" class="img-cover">
+                </div>
+                <div class="p-3">
+                  <h4 class="h6 fw-bold mb-1"><i class="bi bi-truck-flatbed text-cta me-1"></i> Direct Street Offload</h4>
+                  <p class="small text-muted mb-0">Professional driver offloads your car gently right at your curb or driveway entrance.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-4 overflow-hidden border bg-surface h-100 shadow-sm">
+                <div style="height: 180px; overflow: hidden;">
+                  <img src="assets/images/trucks/driver-cab.jpg" alt="Driver direct dispatch communication" class="img-cover">
+                </div>
+                <div class="p-3">
+                  <h4 class="h6 fw-bold mb-1"><i class="bi bi-telephone-inbound text-primary me-1"></i> Proactive Driver Check-in</h4>
+                  <p class="small text-muted mb-0">Direct calls from your assigned driver 24 hours and 2 hours prior to scheduled arrival.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Customer Communication & Scheduling -->
-          <h3 class="h4 fw-bold mb-3">Customer Communication &amp; Arrival Protocol</h3>
+          <h3 class="h4 fw-bold mt-4 mb-3">Customer Communication &amp; Arrival Protocol</h3>
           <p class="text-muted">
             Smooth door-to-door coordination relies on direct, proactive communication between driver, central dispatch, and client:
           </p>
           <div class="row g-3 mb-4">
             <div class="col-md-4">
-              <div class="p-3 rounded border bg-surface text-center h-100">
+              <div class="p-3 rounded border bg-surface text-center h-100 shadow-sm">
                 <div class="feature-icon-badge mx-auto mb-2"><i class="bi bi-clock"></i></div>
                 <h4 class="h6 fw-bold">24-Hour Notice</h4>
                 <p class="small text-muted mb-0">Driver calls 1 day prior to confirm scheduled estimated arrival window.</p>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="p-3 rounded border bg-surface text-center h-100">
+              <div class="p-3 rounded border bg-surface text-center h-100 shadow-sm">
                 <div class="feature-icon-badge orange mx-auto mb-2"><i class="bi bi-telephone-outbound"></i></div>
                 <h4 class="h6 fw-bold">2-Hour Real-Time ETA</h4>
                 <p class="small text-muted mb-0">Driver contacts you when 2 hours out to finalize street address clearance.</p>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="p-3 rounded border bg-surface text-center h-100">
+              <div class="p-3 rounded border bg-surface text-center h-100 shadow-sm">
                 <div class="feature-icon-badge mx-auto mb-2"><i class="bi bi-clipboard2-check"></i></div>
                 <h4 class="h6 fw-bold">Joint Walkaround</h4>
                 <p class="small text-muted mb-0">Inspect vehicle, record odometer, review Bill of Lading, and hand over keys.</p>

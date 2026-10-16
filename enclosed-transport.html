@@ -52,13 +52,14 @@
 
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 — Transport Portal</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-hdd-network"></i> Home 2 — Logistics Control</a></li>
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 (Auto Transport Hub)</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-layers-fill"></i> Home 2 (Alternative Layout)</a></li>
               </ul>
             </li>
 
@@ -67,18 +68,12 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Shipping Solutions
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <li><a class="dropdown-item" href="shipping-solutions.html#nationwide"><i class="bi bi-globe-americas"></i> Nationwide Shipping</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#cross-country"><i class="bi bi-signpost-2-fill"></i> Cross-Country Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#dealer-auction"><i class="bi bi-cash-coin"></i> Dealer &amp; Auction Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#luxury-classic"><i class="bi bi-gem"></i> Luxury &amp; Classic Transport</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="shipping-process.html"><i class="bi bi-diagram-3-fill"></i> Shipping Process</a></li>
-              </ul>
+            <!-- Direct Services & Shipping Process Links (Dropdown removed) -->
+            <li class="nav-item">
+              <a class="nav-link active" href="services.html" aria-current="page">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shipping-process.html">Shipping Process</a>
             </li>
 
             <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
@@ -132,7 +127,9 @@
       </nav>
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
-          <span class="logistics-badge badge-scheduled mb-2"><i class="bi bi-shield-shaded me-1"></i> Premium Protection</span>
+          <span class="badge bg-dark text-white px-3 py-2 rounded-pill fw-bold shadow-sm border border-secondary mb-2">
+            <i class="bi bi-shield-shaded text-warning me-1"></i> Premium Protection
+          </span>
           <h1 class="display-6 fw-bold mb-3">Enclosed Auto Transport Services</h1>
           <p class="text-muted fs-5 mb-0">
             Engineered specifically for luxury sports cars, classic restorations, vintage exotics, and high-value vehicles requiring complete shielding from weather and road elements.
@@ -152,8 +149,13 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-8 gsap-reveal">
-          <div class="rounded-4 overflow-hidden mb-4 shadow-md" style="height: 380px;">
+          <div class="rounded-4 overflow-hidden mb-4 shadow-md position-relative" style="height: 380px;">
             <img src="assets/images/services/enclosed-carrier.jpg" alt="Enclosed Luxury Auto Transport Trailer" class="img-cover">
+            <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(to top, rgba(9, 13, 22, 0.9) 0%, rgba(9, 13, 22, 0.4) 60%, transparent 100%);">
+              <span class="badge bg-dark text-white px-3 py-1 rounded-pill fw-bold border border-secondary">
+                <i class="bi bi-shield-lock-fill text-warning me-1"></i> 100% Sealed Hard-Sided Enclosure
+              </span>
+            </div>
           </div>
 
           <h2 class="h3 fw-bold mb-3">Extra Vehicle Protection &amp; Climate Shielding</h2>
@@ -164,46 +166,54 @@
             While no transportation service can promise 100% absolute immunity from extreme unexpected environmental anomalies, enclosed carrier transport represents the highest available echelon of commercial vehicle shipping protection.
           </p>
 
-          <!-- Hydraulic Lift-Gate & Low-Clearance Loading -->
-          <div class="p-4 rounded-4 bg-subtle border my-4">
-            <h3 class="h4 fw-bold mb-3"><i class="bi bi-tools text-cta me-2"></i> Hydraulic Lift-Gate Loading</h3>
-            <p class="text-muted small mb-3">
-              Standard vehicle haulers use angled ramps that can scrape the front spoilers, diffusers, or undercarriages of low-riding exotic vehicles. Our enclosed carrier fleet features horizontal hydraulic lift gates:
-            </p>
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <div class="p-3 bg-surface rounded-3 border">
-                  <strong class="text-heading d-block mb-1">Zero Angle Clearance</strong>
-                  <span class="small text-muted">The lift platform remains perfectly parallel to the pavement, loading vehicles with zero approach angle.</span>
+          <!-- Visual Lift-Gate & Equipment Highlight -->
+          <div class="row g-4 my-2">
+            <div class="col-md-6">
+              <div class="rounded-4 overflow-hidden border bg-surface h-100 shadow-sm">
+                <div style="height: 180px; overflow: hidden;">
+                  <img src="assets/images/transport/loading.jpg" alt="Hydraulic lift platform loading" class="img-cover">
+                </div>
+                <div class="p-3">
+                  <h4 class="h6 fw-bold mb-1"><i class="bi bi-tools text-cta me-1"></i> Hydraulic Lift-Gate Loading</h4>
+                  <p class="small text-muted mb-0">Platform stays level to road grade, preventing front bumper scraping on track cars and low splitters.</p>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="p-3 bg-surface rounded-3 border">
-                  <strong class="text-heading d-block mb-1">Soft Webbing Over-Tire Straps</strong>
-                  <span class="small text-muted">Soft polyester straps secure exclusively to tires, avoiding any contact with polished wheels or painted surfaces.</span>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded-4 overflow-hidden border bg-surface h-100 shadow-sm">
+                <div style="height: 180px; overflow: hidden;">
+                  <img src="assets/images/transport/inspection.jpg" alt="White glove pre transport inspection" class="img-cover">
+                </div>
+                <div class="p-3">
+                  <h4 class="h6 fw-bold mb-1"><i class="bi bi-clipboard2-check text-primary me-1"></i> White-Glove Inspection</h4>
+                  <p class="small text-muted mb-0">Comprehensive 360° photo audit and digital Bill of Lading with high-definition paint condition capture.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Ideal Candidates -->
-          <h3 class="h4 fw-bold mb-3">Vehicles Recommended for Enclosed Transport</h3>
+          <!-- Ideal Candidates with Visuals -->
+          <h3 class="h4 fw-bold mt-4 mb-3">Vehicles Recommended for Enclosed Transport</h3>
           <div class="row g-3 mb-4">
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-3 p-3 rounded border bg-surface">
-                <i class="bi bi-gem text-cta fs-4"></i>
-                <div>
-                  <strong class="text-heading d-block">Exotic &amp; Supercars</strong>
-                  <small class="text-muted">Ferrari, McLaren, Lamborghini, Porsche, Aston Martin</small>
+              <div class="rounded-3 border bg-surface overflow-hidden shadow-sm">
+                <div style="height: 140px; overflow: hidden;">
+                  <img src="assets/images/services/luxury-transport.jpg" alt="Exotic and Supercars shipping" class="img-cover">
+                </div>
+                <div class="p-3">
+                  <strong class="text-heading d-block mb-1"><i class="bi bi-gem text-cta me-1"></i> Exotic &amp; Supercars</strong>
+                  <small class="text-muted">Ferrari, McLaren, Lamborghini, Porsche, Aston Martin with soft wheel straps.</small>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-3 p-3 rounded border bg-surface">
-                <i class="bi bi-award-fill text-primary fs-4"></i>
-                <div>
-                  <strong class="text-heading d-block">Classic &amp; Vintage Muscle</strong>
-                  <small class="text-muted">Collector restorations, rare antiques, auction buys</small>
+              <div class="rounded-3 border bg-surface overflow-hidden shadow-sm">
+                <div style="height: 140px; overflow: hidden;">
+                  <img src="assets/images/services/classic-transport.jpg" alt="Classic vintage collector vehicle shipping" class="img-cover">
+                </div>
+                <div class="p-3">
+                  <strong class="text-heading d-block mb-1"><i class="bi bi-award-fill text-warning me-1"></i> Classic &amp; Vintage Muscle</strong>
+                  <small class="text-muted">Collector restorations, rare antiques, auction buys, and Concours entries.</small>
                 </div>
               </div>
             </div>
@@ -212,7 +222,7 @@
                 <i class="bi bi-star-fill text-warning fs-4"></i>
                 <div>
                   <strong class="text-heading d-block">Concourse Show Vehicles</strong>
-                  <small class="text-muted">Pebble Beach, Amelia Island, SEMA show cars</small>
+                  <small class="text-muted">Pebble Beach, Amelia Island, SEMA show cars requiring spotless arrival.</small>
                 </div>
               </div>
             </div>
@@ -221,7 +231,7 @@
                 <i class="bi bi-lightning-charge-fill text-primary fs-4"></i>
                 <div>
                   <strong class="text-heading d-block">High-Line Luxury Sedans</strong>
-                  <small class="text-muted">Rolls-Royce, Bentley, Mercedes-Maybach</small>
+                  <small class="text-muted">Rolls-Royce, Bentley, and bespoke executive long-wheelbase transports.</small>
                 </div>
               </div>
             </div>

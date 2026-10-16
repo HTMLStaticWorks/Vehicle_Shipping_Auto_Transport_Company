@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get a Vehicle Transport Quote | ROADLINK AUTO</title>
-  <meta name="description" content="Calculate an instant, all-inclusive auto transport quote. Door-to-door vehicle shipping rates for open and enclosed carriers nationwide. Zero hidden charges.">
-  <meta name="keywords" content="car shipping quote, auto transport calculator, vehicle shipping rates, open vs enclosed shipping cost">
+  <title>Instant Auto Transport Quote Calculator | ROADLINK AUTO</title>
+  <meta name="description" content="Calculate your nationwide vehicle shipping quote in seconds. Transparent rates, open & enclosed carrier options, zero hidden fees, and fully insured transport.">
+  <meta name="keywords" content="instant car shipping quote, auto transport calculator, vehicle shipping rates, door to door quote">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,7 @@
 </head>
 <body>
 
-
-  <!-- Mandatory Navbar -->
+  <!-- Mandatory Sticky Navbar -->
   <header class="site-header">
     <div class="container">
       <nav class="navbar navbar-expand-xl navbar-light py-2" aria-label="Main Navigation">
@@ -32,6 +31,7 @@
               <path d="M 36 32 L 41 32 L 41 26 L 37 24 Z" fill="#ea580c"/>
               <circle cx="16" cy="34" r="3.5" fill="#f8fafc"/>
               <circle cx="34" cy="34" r="3.5" fill="#f8fafc"/>
+              <circle cx="34" cy="34" r="1.5" fill="#0f172a"/>
               <path d="M 6 38 C 14 43, 34 43, 42 37" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
             </g>
             <text x="64" y="32" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="currentColor">
@@ -52,13 +52,14 @@
 
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <!-- Home Dropdown (Without Transport vs Logistics Differentiation) -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 — Transport Portal</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-hdd-network"></i> Home 2 — Logistics Control</a></li>
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 (Auto Transport Hub)</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-layers-fill"></i> Home 2 (Alternative Layout)</a></li>
               </ul>
             </li>
 
@@ -67,22 +68,16 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Shipping Solutions
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <li><a class="dropdown-item" href="shipping-solutions.html#nationwide"><i class="bi bi-globe-americas"></i> Nationwide Shipping</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#cross-country"><i class="bi bi-signpost-2-fill"></i> Cross-Country Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#dealer-auction"><i class="bi bi-cash-coin"></i> Dealer &amp; Auction Transport</a></li>
-                <li><a class="dropdown-item" href="shipping-solutions.html#luxury-classic"><i class="bi bi-gem"></i> Luxury &amp; Classic Transport</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="shipping-process.html"><i class="bi bi-diagram-3-fill"></i> Shipping Process</a></li>
-              </ul>
+            <!-- Direct Services & Shipping Process Links (Dropdown removed) -->
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shipping-process.html">Shipping Process</a>
             </li>
 
             <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
-            <li class="nav-item"><a class="nav-link active" href="get-a-quote.html">Get a Quote</a></li>
+            <li class="nav-item"><a class="nav-link active" href="get-a-quote.html" aria-current="page">Get a Quote</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             <li class="nav-item">
               <a class="nav-link" href="dashboard.html">Dashboard</a>
@@ -120,14 +115,32 @@
     </div>
   </header>
 
-  <!-- Page Header -->
+  <!-- Split Hero Section With Visual -->
   <section class="py-5 bg-subtle border-bottom">
-    <div class="container text-center max-w-700 mx-auto">
-      <span class="logistics-badge bg-primary text-white mb-2"><i class="bi bi-calculator me-1"></i> Multi-Section Quote Form</span>
-      <h1 class="display-5 fw-bold mb-3">Instant Auto Transport Quote</h1>
-      <p class="text-muted fs-5 mb-0">
-        Transparent door-to-door vehicle shipping rates. No hidden fees, no obligation, and full carrier liability verification.
-      </p>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 gsap-reveal">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2 small">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Get a Quote</li>
+            </ol>
+          </nav>
+          <span class="logistics-badge bg-primary text-white mb-2"><i class="bi bi-calculator me-1"></i> Multi-Section Quote Form</span>
+          <h1 class="display-5 fw-bold mb-3">Instant Auto Transport Quote</h1>
+          <p class="text-muted fs-5 mb-0">
+            Transparent door-to-door vehicle shipping rates across all 50 states. No hidden fees, zero upfront payment, and full carrier liability verification.
+          </p>
+        </div>
+        <div class="col-lg-5 gsap-reveal">
+          <div class="rounded-4 overflow-hidden shadow-xl border position-relative" style="height: 240px;">
+            <img src="assets/images/hero/hero-transport.jpg" alt="Nationwide Carrier Truck Fleet" class="img-cover">
+            <span class="position-absolute bottom-0 start-0 m-3 card-badge-high-contrast badge-dark-contrast">
+              <i class="bi bi-shield-check text-warning me-1"></i> 100% Insured Carriers
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -209,12 +222,53 @@
                 </div>
               </div>
 
-              <!-- Section 3: Vehicle Information -->
+              <!-- Section 3: Vehicle Information & Visual Category Showcase -->
               <div class="mb-5 pb-4 border-bottom border-subtle">
                 <div class="d-flex align-items-center gap-2 mb-3">
                   <span class="badge bg-primary rounded-circle p-2 fs-6">3</span>
                   <h2 class="h5 fw-bold mb-0">Vehicle Specifications</h2>
                 </div>
+
+                <!-- Vehicle Category Thumbnails -->
+                <div class="row g-2 mb-3">
+                  <div class="col-4 col-sm-2 text-center">
+                    <div class="p-1 rounded-2 border bg-subtle">
+                      <img src="assets/images/vehicles/sedan.jpg" alt="Sedan" class="img-fluid rounded mb-1" style="height: 48px; width: 100%; object-fit: cover;">
+                      <span class="small fw-semibold d-block text-truncate" style="font-size: 0.7rem;">Sedan</span>
+                    </div>
+                  </div>
+                  <div class="col-4 col-sm-2 text-center">
+                    <div class="p-1 rounded-2 border bg-subtle">
+                      <img src="assets/images/vehicles/suv.jpg" alt="SUV" class="img-fluid rounded mb-1" style="height: 48px; width: 100%; object-fit: cover;">
+                      <span class="small fw-semibold d-block text-truncate" style="font-size: 0.7rem;">SUV</span>
+                    </div>
+                  </div>
+                  <div class="col-4 col-sm-2 text-center">
+                    <div class="p-1 rounded-2 border bg-subtle">
+                      <img src="assets/images/vehicles/truck.jpg" alt="Truck" class="img-fluid rounded mb-1" style="height: 48px; width: 100%; object-fit: cover;">
+                      <span class="small fw-semibold d-block text-truncate" style="font-size: 0.7rem;">Truck</span>
+                    </div>
+                  </div>
+                  <div class="col-4 col-sm-2 text-center">
+                    <div class="p-1 rounded-2 border bg-subtle">
+                      <img src="assets/images/vehicles/classic.jpg" alt="Classic" class="img-fluid rounded mb-1" style="height: 48px; width: 100%; object-fit: cover;">
+                      <span class="small fw-semibold d-block text-truncate" style="font-size: 0.7rem;">Classic</span>
+                    </div>
+                  </div>
+                  <div class="col-4 col-sm-2 text-center">
+                    <div class="p-1 rounded-2 border bg-subtle">
+                      <img src="assets/images/vehicles/luxury.jpg" alt="Luxury" class="img-fluid rounded mb-1" style="height: 48px; width: 100%; object-fit: cover;">
+                      <span class="small fw-semibold d-block text-truncate" style="font-size: 0.7rem;">Luxury</span>
+                    </div>
+                  </div>
+                  <div class="col-4 col-sm-2 text-center">
+                    <div class="p-1 rounded-2 border bg-subtle">
+                      <img src="assets/images/vehicles/motorcycle.jpg" alt="Motorcycle" class="img-fluid rounded mb-1" style="height: 48px; width: 100%; object-fit: cover;">
+                      <span class="small fw-semibold d-block text-truncate" style="font-size: 0.7rem;">Moto</span>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="row g-3">
                   <div class="col-md-4">
                     <label for="vehicleYear" class="form-label">Year <span class="text-danger">*</span></label>
@@ -252,7 +306,7 @@
                 </div>
               </div>
 
-              <!-- Section 4: Transport Method & Dates -->
+              <!-- Section 4: Transport Method With Visual Carrier Cards -->
               <div class="mb-5 pb-4 border-bottom border-subtle">
                 <div class="d-flex align-items-center gap-2 mb-3">
                   <span class="badge bg-cta rounded-circle p-2 fs-6">4</span>
@@ -261,19 +315,27 @@
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label class="form-label">Transport Protection Mode</label>
-                    <div class="choice-card-group">
-                      <label class="choice-card is-active">
-                        <input type="radio" name="transport_type" value="Open Carrier" checked>
-                        <i class="bi bi-truck"></i>
-                        <span class="choice-title">Open Carrier</span>
-                        <small class="text-muted d-block" style="font-size: 0.7rem;">Economical &amp; Reliable</small>
-                      </label>
-                      <label class="choice-card">
-                        <input type="radio" name="transport_type" value="Enclosed Carrier">
-                        <i class="bi bi-shield-shaded"></i>
-                        <span class="choice-title">Enclosed Carrier</span>
-                        <small class="text-muted d-block" style="font-size: 0.7rem;">Maximum Protection</small>
-                      </label>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <label class="choice-card is-active d-block p-2 text-center h-100">
+                          <input type="radio" name="transport_type" value="Open Carrier" checked class="d-none">
+                          <div class="rounded-2 overflow-hidden mb-2" style="height: 70px;">
+                            <img src="assets/images/services/open-carrier.jpg" alt="Open Carrier" class="img-cover">
+                          </div>
+                          <span class="choice-title small d-block">Open Carrier</span>
+                          <small class="text-muted" style="font-size: 0.7rem;">Economical &amp; Fast</small>
+                        </label>
+                      </div>
+                      <div class="col-6">
+                        <label class="choice-card d-block p-2 text-center h-100">
+                          <input type="radio" name="transport_type" value="Enclosed Carrier" class="d-none">
+                          <div class="rounded-2 overflow-hidden mb-2" style="height: 70px;">
+                            <img src="assets/images/services/enclosed-carrier.jpg" alt="Enclosed Carrier" class="img-cover">
+                          </div>
+                          <span class="choice-title small d-block">Enclosed Carrier</span>
+                          <small class="text-muted" style="font-size: 0.7rem;">Maximum Shielding</small>
+                        </label>
+                      </div>
                     </div>
                   </div>
 
@@ -337,6 +399,49 @@
             </form>
           </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals & Carrier Inspection Standards -->
+  <section class="section-padding bg-subtle border-top">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 gsap-reveal">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="rounded-4 overflow-hidden shadow-md border" style="height: 180px;">
+                <img src="assets/images/transport/inspection.jpg" alt="Digital BOL vehicle inspection" class="img-cover">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="rounded-4 overflow-hidden shadow-md border" style="height: 180px;">
+                <img src="assets/images/trucks/carrier-fleet.jpg" alt="Commercial carrier fleet" class="img-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 gsap-reveal">
+          <span class="section-subtitle">Verified Standards</span>
+          <h2 class="section-title mb-3">Transparent Carrier Coordination</h2>
+          <p class="text-muted mb-4">
+            RoadLink Auto guarantees locked rates without unexpected destination terminal fees. Every carrier is DOT/FMCSA compliant with verified active cargo insurance.
+          </p>
+          <div class="d-flex gap-4">
+            <div>
+              <div class="h4 fw-bold text-primary mb-0">Zero Upfront</div>
+              <small class="text-muted">Pay only when carrier routes</small>
+            </div>
+            <div class="border-start ps-4">
+              <div class="h4 fw-bold text-cta mb-0">$250k–$1M</div>
+              <small class="text-muted">Cargo policy coverage</small>
+            </div>
+            <div class="border-start ps-4">
+              <div class="h4 fw-bold text-success mb-0">50 States</div>
+              <small class="text-muted">Door-to-door direct</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
