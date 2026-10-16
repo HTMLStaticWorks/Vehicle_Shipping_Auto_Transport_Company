@@ -139,7 +139,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -148,7 +148,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   transition: background-color var(--transition-normal), color var(--transition-normal);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -187,23 +187,25 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   3. Navbar & Header Navigation
+   3. Navbar & Header Navigation (Sticky Navbar on Scroll)
    -------------------------------------------------------------------------- */
 .site-header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1040;
+  z-index: 1050;
   width: 100%;
   background-color: var(--bg-navbar);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
-  transition: all var(--transition-normal);
+  transition: background-color var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
 .site-header.is-scrolled {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
   border-bottom-color: var(--border-color);
+  background-color: var(--bg-navbar);
 }
 
 .site-header .btn-sm-custom,
@@ -1930,6 +1932,75 @@ html[dir="rtl"] .dashboard-sidebar-nav .nav-link i {
   margin-right: 0 !important;
 }
 
+/* ==========================================================================
+   Shipping Process Step Timeline & Tab View Layout
+   ========================================================================== */
+.process-step-row {
+  position: relative;
+}
+
+.process-step-num {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.step-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: var(--bg-muted);
+}
+
+.process-step-desc {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.process-deliverable-card {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.15rem;
+  font-size: 0.875rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.process-deliverable-card:hover {
+  border-color: var(--color-primary);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.process-deliverable-text {
+  color: var(--text-main);
+  line-height: 1.55;
+}
+
+/* Tablet / Tab View (768px to 1199.98px): Image is wide banner; Text and Deliverable sit cleanly below */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .process-step-num {
+    font-size: 2.25rem;
+  }
+  .step-image-wrap {
+    height: 260px;
+  }
+}
+
+/* Desktop View (>= 1200px): Clean side-by-side horizontal pipeline */
+@media (min-width: 1200px) {
+  .step-image-wrap {
+    height: 190px;
+  }
+}
+
 /* Reduced Motion Mode */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1944,3 +2015,4 @@ html[dir="rtl"] .dashboard-sidebar-nav .nav-link i {
     transform: none !important;
   }
 }
+

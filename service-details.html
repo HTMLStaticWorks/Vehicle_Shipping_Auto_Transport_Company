@@ -127,9 +127,9 @@
 
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
-          <span class="logistics-badge bg-primary text-white mb-2">Transport Protocol Guide</span>
-          <h1 class="display-6 fw-bold mb-3">Service Details &amp; Operational Standards</h1>
-          <p class="text-muted fs-5 mb-0">
+          <span class="logistics-badge bg-primary text-white mb-2" id="serviceBadge">Transport Protocol Guide</span>
+          <h1 class="display-6 fw-bold mb-3" id="serviceTitle">Service Details &amp; Operational Standards</h1>
+          <p class="text-muted fs-5 mb-0" id="serviceSubtitle">
             A comprehensive breakdown of equipment specifications, vehicle loading requirements, carrier safety criteria, and transit protocols.
           </p>
         </div>
@@ -149,11 +149,11 @@
         <!-- Main Column -->
         <div class="col-lg-8 gsap-reveal">
           <div class="mb-5">
-            <div class="rounded-4 overflow-hidden mb-4 shadow-md" style="height: 360px;">
-              <img src="assets/images/services/open-carrier.jpg" alt="Automotive Carrier Inspection and Loading" class="img-cover">
+            <div class="rounded-4 overflow-hidden mb-4 shadow-md" style="height: 380px;">
+              <img src="assets/images/services/open-carrier.jpg" alt="Automotive Carrier Inspection and Loading" class="img-cover" id="serviceMainImage">
             </div>
 
-            <h2 class="h3 fw-bold mb-3">Service Overview &amp; Execution</h2>
+            <h2 class="h3 fw-bold mb-3" id="serviceOverviewHeading">Service Overview &amp; Execution</h2>
             <p class="text-muted">
               Every RoadLink Auto shipment operates under standardized transport guidelines developed to balance efficiency, equipment reliability, and customer communication. Our carrier network utilizes specialized car haulers configured to protect vehicle chassis and finishes during interstate movement.
             </p>
@@ -508,5 +508,88 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/gsap.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const service = params.get('service');
+      const serviceData = {
+        auction: {
+          title: 'Auto Auction Vehicle Transport',
+          subtitle: 'Expedited gate release, buyer PIN verification, and winching transport from Copart, Manheim, and IAAI yards.',
+          badge: 'Auction Dispatch Protocol',
+          heading: 'Auction Recovery & Gate Clearance Overview',
+          image: 'assets/images/services/auction-transport.jpg',
+          alt: 'Auto Auction Vehicle Staging and Transport'
+        },
+        classic: {
+          title: 'Classic & Vintage Car Transport',
+          subtitle: 'White-glove concourse protection, soft tire-webbing anchors, and climate-controlled enclosed transit for historic vehicles.',
+          badge: 'Antique & Collector Protocol',
+          heading: 'Historic Automobile Care & Low-Angle Loading',
+          image: 'assets/images/services/classic-transport.jpg',
+          alt: 'Classic Vintage Automobile Transport'
+        },
+        luxury: {
+          title: 'Luxury & Exotic Supercar Transport',
+          subtitle: 'Zero-degree hydraulic lift-gates and pristine hard-sided enclosed trailers for high-value exotics and bespoke EVs.',
+          badge: 'White-Glove Exotic Protocol',
+          heading: 'Exotic Supercar Shielded Transport',
+          image: 'assets/images/services/luxury-transport.jpg',
+          alt: 'Luxury Exotic Supercar Auto Transport'
+        },
+        dealer: {
+          title: 'Dealership Fleet & Commercial Transport',
+          subtitle: 'High-density multi-car hauler scheduling, lot balancing, and dealer-trade logistics with dedicated dispatch accounts.',
+          badge: 'Enterprise B2B Logistics',
+          heading: 'Dealership Inventory Logistics & Batch Movement',
+          image: 'assets/images/services/dealer-transport.jpg',
+          alt: 'Commercial Dealership Auto Transport'
+        },
+        'door-to-door': {
+          title: 'Door-to-Door Vehicle Shipping',
+          subtitle: 'Convenient residential driveway pickup and delivery without the hassle of remote freight terminals or transfer yards.',
+          badge: 'Direct Residential Protocol',
+          heading: 'Direct Driveway Vehicle Relocation Protocol',
+          image: 'assets/images/services/door-to-door.jpg',
+          alt: 'Door to Door Auto Transport'
+        },
+        enclosed: {
+          title: 'Enclosed Carrier Vehicle Shipping',
+          subtitle: 'Rigid hard-sided covered trailers offering 100% protection against road gravel, highway debris, and weather elements.',
+          badge: 'Maximum Enclosed Protection',
+          heading: 'Climate-Shielded Enclosed Transport Standards',
+          image: 'assets/images/services/enclosed-carrier.jpg',
+          alt: 'Enclosed Auto Transport Carrier'
+        },
+        open: {
+          title: 'Open Carrier Auto Transport',
+          subtitle: 'The nationwide standard for cost-effective vehicle relocation on double-decker commercial car carriers.',
+          badge: 'Standard Carrier Protocol',
+          heading: 'Open Multi-Car Hauling Specifications',
+          image: 'assets/images/services/open-carrier.jpg',
+          alt: 'Open Carrier Auto Transport'
+        }
+      };
+
+      if (service && serviceData[service]) {
+        const data = serviceData[service];
+        const titleEl = document.getElementById('serviceTitle');
+        const subEl = document.getElementById('serviceSubtitle');
+        const badgeEl = document.getElementById('serviceBadge');
+        const headingEl = document.getElementById('serviceOverviewHeading');
+        const imgEl = document.getElementById('serviceMainImage');
+
+        if (titleEl) titleEl.textContent = data.title;
+        if (subEl) subEl.textContent = data.subtitle;
+        if (badgeEl) badgeEl.textContent = data.badge;
+        if (headingEl) headingEl.textContent = data.heading;
+        if (imgEl) {
+          imgEl.src = data.image;
+          imgEl.alt = data.alt;
+        }
+        document.title = data.title + ' | ROADLINK AUTO';
+      }
+    })();
+  </script>
 </body>
 </html>

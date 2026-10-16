@@ -72,7 +72,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
                 <li><a class="dropdown-item active" href="index.html"><i class="bi bi-speedometer2"></i> Home 1 (Auto Transport Hub)</a></li>
-                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-layers-fill"></i> Home 2 (Alternative Layout)</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-layers-fill"></i> Home 2 (Alternative Dual Division)</a></li>
               </ul>
             </li>
 
@@ -327,21 +327,30 @@
   </section>
 
   <!-- ==========================================================================
-       CORE SERVICES SECTION
+       SECTION 1: VEHICLE AUTO TRANSPORT SERVICES (CONSUMER & PRIVATE)
        ========================================================================== -->
-  <section class="section-padding bg-subtle">
+  <section class="section-padding bg-subtle" id="auto-transport-services">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto section-title-wrap gsap-reveal">
-        <span class="section-subtitle">Tailored Logistics Solutions</span>
-        <h2 class="section-title">Comprehensive Auto Transport Services</h2>
-        <p class="text-muted">From daily drivers to rare collectibles and commercial dealership fleets, explore our specialized vehicle transport services.</p>
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-5 border-bottom pb-3 gsap-reveal">
+        <div>
+          <span class="badge bg-primary px-3 py-2 rounded-pill fw-bold mb-2">
+            <i class="bi bi-car-front-fill me-1"></i> CONSUMER AUTO TRANSPORT
+          </span>
+          <h2 class="section-title mb-1">Vehicle Auto Transport Services</h2>
+          <p class="text-muted mb-0">Dedicated door-to-door relocation for personal cars, SUVs, pickup trucks, and collector vehicles.</p>
+        </div>
+        <div>
+          <a href="get-a-quote.html" class="btn btn-primary">
+            <i class="bi bi-calculator-fill me-1"></i> Get Personal Quote
+          </a>
+        </div>
       </div>
 
       <div class="row g-4 justify-content-center row-cards-1024-2col">
         <!-- Service 1: Open Auto Transport -->
-        <div class="col-md-6 col-lg-6 col-xl-4 gsap-reveal">
-          <div class="card-custom">
-            <div class="position-relative overflow-hidden" style="height: 200px;">
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom h-100">
+            <div class="position-relative overflow-hidden" style="height: 190px;">
               <img src="assets/images/services/open-carrier.jpg" alt="Open Auto Transport Carrier" class="img-cover">
               <div class="card-img-gradient-overlay"></div>
               <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-primary-contrast"><i class="bi bi-star-fill text-warning me-1"></i> Most Popular</span>
@@ -351,8 +360,8 @@
                 <i class="bi bi-truck"></i>
               </div>
               <h3 class="h5 fw-bold mb-2">Open Auto Transport</h3>
-              <p class="text-muted small mb-4">
-                The industry standard for cost-effective vehicle shipping. Multi-vehicle double-decker carriers providing fast scheduling and reliable transit nationwide.
+              <p class="text-muted small mb-3">
+                The standard for cost-effective vehicle shipping. Multi-vehicle double-decker carriers providing fast scheduling nationwide.
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
                 <span class="small fw-semibold text-muted">Transit: 3 - 7 Days</span>
@@ -362,10 +371,10 @@
           </div>
         </div>
 
-        <!-- Service 2: Enclosed Auto Transport (High-contrast fix on 2nd image) -->
-        <div class="col-md-6 col-lg-6 col-xl-4 gsap-reveal">
-          <div class="card-custom">
-            <div class="position-relative overflow-hidden" style="height: 200px;">
+        <!-- Service 2: Enclosed Auto Transport -->
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom h-100">
+            <div class="position-relative overflow-hidden" style="height: 190px;">
               <img src="assets/images/services/enclosed-carrier.jpg" alt="Enclosed Luxury Auto Transport" class="img-cover">
               <div class="card-img-gradient-overlay"></div>
               <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-dark-contrast"><i class="bi bi-shield-lock-fill text-warning me-1"></i> Premium Protection</span>
@@ -374,9 +383,9 @@
               <div class="feature-icon-badge orange">
                 <i class="bi bi-shield-shaded"></i>
               </div>
-              <h3 class="h5 fw-bold mb-2">Enclosed Auto Transport</h3>
-              <p class="text-muted small mb-4">
-                Hard-sided enclosed trailers shielding exotic, antique, and high-value vehicles from road debris, weather conditions, and highway elements.
+              <h3 class="h5 fw-bold mb-2">Enclosed Transport</h3>
+              <p class="text-muted small mb-3">
+                Hard-sided enclosed trailers shielding exotic, antique, and high-value vehicles from road debris, weather, and dust.
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
                 <span class="small fw-semibold text-muted">White-Glove Handling</span>
@@ -387,9 +396,9 @@
         </div>
 
         <!-- Service 3: Door-to-Door Shipping -->
-        <div class="col-md-6 col-lg-6 col-xl-4 gsap-reveal">
-          <div class="card-custom">
-            <div class="position-relative overflow-hidden" style="height: 200px;">
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom h-100">
+            <div class="position-relative overflow-hidden" style="height: 190px;">
               <img src="assets/images/services/door-to-door.jpg" alt="Door to Door Vehicle Delivery" class="img-cover">
               <div class="card-img-gradient-overlay"></div>
               <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast"><i class="bi bi-house-door-fill text-primary me-1"></i> Direct Driveway</span>
@@ -398,45 +407,93 @@
               <div class="feature-icon-badge">
                 <i class="bi bi-house-door-fill"></i>
               </div>
-              <h3 class="h5 fw-bold mb-2">Door-to-Door Shipping</h3>
-              <p class="text-muted small mb-4">
-                No terminal drop-offs or remote warehouse collections. The transport carrier picks up and delivers as close to your driveway as safely accessible.
+              <h3 class="h5 fw-bold mb-2">Door-to-Door Delivery</h3>
+              <p class="text-muted small mb-3">
+                No terminal drop-offs or remote warehouse collections. Direct pickup and delivery at your residence or driveway.
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
-                <span class="small fw-semibold text-muted">Direct Address Delivery</span>
+                <span class="small fw-semibold text-muted">Direct Address</span>
                 <a href="door-to-door.html" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Service 4: Dealer & Commercial Transport -->
-        <div class="col-md-6 col-lg-6 col-xl-4 gsap-reveal">
-          <div class="card-custom">
+        <!-- Service 4: Classic & Vintage Transport -->
+        <div class="col-md-6 col-lg-6 col-xl-3 gsap-reveal">
+          <div class="card-custom h-100">
+            <div class="position-relative overflow-hidden" style="height: 190px;">
+              <img src="assets/images/services/classic-transport.jpg" alt="Classic Antique Car Shipping" class="img-cover">
+              <div class="card-img-gradient-overlay"></div>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-orange-contrast"><i class="bi bi-award-fill text-white me-1"></i> Historic Care</span>
+            </div>
+            <div class="card-custom-body">
+              <div class="feature-icon-badge orange">
+                <i class="bi bi-award-fill"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Classic &amp; Vintage</h3>
+              <p class="text-muted small mb-3">
+                Over-the-tire soft nylon tie-downs and gentle loading ramps preventing chassis tension on historic and collector models.
+              </p>
+              <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
+                <span class="small fw-semibold text-muted">Concourse Grade</span>
+                <a href="service-details.html?service=classic" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: COMMERCIAL FREIGHT & LOGISTICS (SEPARATE B2B CATEGORY)
+       ========================================================================== -->
+  <section class="section-padding bg-surface border-top border-bottom" id="commercial-logistics-services">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-5 border-bottom pb-3 gsap-reveal">
+        <div>
+          <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-2">
+            <i class="bi bi-truck-front-fill me-1"></i> COMMERCIAL LOGISTICS
+          </span>
+          <h2 class="section-title mb-1">Commercial Freight &amp; Vehicle Logistics</h2>
+          <p class="text-muted mb-0">High-capacity carrier rigs, dealership inventory balancing, auto auction gate retrieval, and fleet linehauls.</p>
+        </div>
+        <div>
+          <a href="home-2.html#commercial-logistics-division" class="btn btn-cta">
+            <i class="bi bi-layers-fill me-1"></i> View Dual-Division Portal
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <!-- B2B Service 1: Dealer & Fleet Transport -->
+        <div class="col-md-6 col-lg-4 gsap-reveal">
+          <div class="card-custom h-100">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/dealer-transport.jpg" alt="Dealer Multi-car Transport" class="img-cover">
               <div class="card-img-gradient-overlay"></div>
-              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast"><i class="bi bi-buildings text-primary me-1"></i> Dealer &amp; Fleet</span>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast"><i class="bi bi-buildings text-primary me-1"></i> Commercial B2B</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge">
                 <i class="bi bi-buildings"></i>
               </div>
-              <h3 class="h5 fw-bold mb-2">Dealer &amp; Fleet Transport</h3>
-              <p class="text-muted small mb-4">
-                B2B inventory relocations, multi-car batch movements, and dealership trades coordinated on strict timelines with dedicated dispatch agents.
+              <h3 class="h5 fw-bold mb-2">Dealership Lot Balancing</h3>
+              <p class="text-muted small mb-3">
+                Full truckload (FTL) and less-than-truckload (LTL) 9-car stinger rig logistics for multi-branch lot balancing and dealer trades.
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
-                <span class="small fw-semibold text-muted">Multi-Car Rates</span>
+                <span class="small fw-semibold text-muted">Volume Rates</span>
                 <a href="dealer-transport.html" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Service 5: Auction Vehicle Shipping -->
-        <div class="col-md-6 col-lg-6 col-xl-4 gsap-reveal">
-          <div class="card-custom">
+        <!-- B2B Service 2: Auction Vehicle Transport -->
+        <div class="col-md-6 col-lg-4 gsap-reveal">
+          <div class="card-custom h-100">
             <div class="position-relative overflow-hidden" style="height: 200px;">
               <img src="assets/images/services/auction-transport.jpg" alt="Auto Auction Staging Yard" class="img-cover">
               <div class="card-img-gradient-overlay"></div>
@@ -446,47 +503,63 @@
               <div class="feature-icon-badge orange">
                 <i class="bi bi-hammer"></i>
               </div>
-              <h3 class="h5 fw-bold mb-2">Auction Vehicle Transport</h3>
-              <p class="text-muted small mb-4">
-                Direct pickup coordination from major auto auctions (Copart, Manheim, IAAI). Fast gate pass validation and inoperable winching services available.
+              <h3 class="h5 fw-bold mb-2">Auction Gate Recovery</h3>
+              <p class="text-muted small mb-3">
+                Direct pickup coordination from Copart, Manheim, and IAAI with PIN validation, gate pass recovery, and storage fee avoidance.
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
-                <span class="small fw-semibold text-muted">Gate Pass Handling</span>
-                <a href="services.html" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
+                <span class="small fw-semibold text-muted">Gate Pass Ready</span>
+                <a href="service-details.html?service=auction" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Service 6: Classic & Luxury Transport -->
-        <div class="col-md-6 col-lg-6 col-xl-4 gsap-reveal">
-          <div class="card-custom">
+        <!-- B2B Service 3: Commercial Fleet Relocation -->
+        <div class="col-md-6 col-lg-4 gsap-reveal">
+          <div class="card-custom h-100">
             <div class="position-relative overflow-hidden" style="height: 200px;">
-              <img src="assets/images/services/luxury-transport.jpg" alt="Exotic Luxury Vehicle Shipping" class="img-cover">
+              <img src="assets/images/trucks/carrier-fleet.jpg" alt="Commercial Fleet Multi-Unit Haulers" class="img-cover">
               <div class="card-img-gradient-overlay"></div>
-              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast badge-dark-contrast"><i class="bi bi-gem text-warning me-1"></i> White-Glove Care</span>
+              <span class="position-absolute top-0 start-0 m-3 card-badge-high-contrast"><i class="bi bi-briefcase-fill text-primary me-1"></i> Fleet Relocation</span>
             </div>
             <div class="card-custom-body">
               <div class="feature-icon-badge">
-                <i class="bi bi-gem"></i>
+                <i class="bi bi-briefcase-fill"></i>
               </div>
-              <h3 class="h5 fw-bold mb-2">Luxury &amp; Classic Transport</h3>
-              <p class="text-muted small mb-4">
-                Specialized hydraulic lift-gate carriers and soft non-abrasive tie-down straps engineered specifically for low-clearance exotics and vintage classics.
+              <h3 class="h5 fw-bold mb-2">Corporate Fleet Relocation</h3>
+              <p class="text-muted small mb-3">
+                Scheduled multi-unit relocations, executive transfers, and commercial fleet lease-turnback distribution coordinated nationwide.
               </p>
               <div class="mt-auto pt-3 border-top border-subtle d-flex justify-content-between align-items-center">
-                <span class="small fw-semibold text-muted">Zero-Angle Loading</span>
-                <a href="services.html" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
+                <span class="small fw-semibold text-muted">Dedicated Dispatch</span>
+                <a href="shipping-solutions.html" class="fw-bold text-primary small">Learn More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="text-center mt-5">
-        <a href="services.html" class="btn btn-primary-custom btn-lg-custom">
-          View All 8 Specialized Transport Services <i class="bi bi-arrow-right"></i>
-        </a>
+      <!-- Commercial Dispatch Desk Highlights Banner -->
+      <div class="p-4 rounded-4 bg-subtle border gsap-reveal">
+        <div class="row align-items-center g-4">
+          <div class="col-md-3">
+            <div class="rounded-3 overflow-hidden border shadow-sm" style="height: 120px;">
+              <img src="assets/images/logistics/dispatch-desk.jpg" alt="Central Commercial Dispatch Desk" class="img-cover">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4 class="h6 fw-bold mb-1"><i class="bi bi-headset text-cta me-1"></i> Dedicated Commercial Dispatcher &amp; $1M+ Cargo Insurance</h4>
+            <p class="small text-muted mb-0">
+              Dealerships and fleet directors receive direct priority telephone access to an assigned logistics officer with live automated VIN status feeds and FMCSA compliant compliance documentation.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a href="contact.html" class="btn btn-outline-custom btn-sm-custom">
+              Speak with Dispatch <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

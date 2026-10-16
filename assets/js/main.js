@@ -141,7 +141,7 @@
     if (!header) return;
 
     const handleScroll = () => {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 15) {
         header.classList.add('is-scrolled');
       } else {
         header.classList.remove('is-scrolled');
