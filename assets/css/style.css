@@ -1374,7 +1374,8 @@ textarea::placeholder {
   .cta-btn-group > .btn {
     flex: 1 1 calc(50% - 0.75rem);
     min-width: 180px;
-    height: 48px;
+    min-height: 48px;
+    height: auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1383,10 +1384,53 @@ textarea::placeholder {
 }
 
 @media (max-width: 575.98px) {
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
   .hero-btn-group > .btn,
   .cta-btn-group > .btn {
     flex: 1 1 100%;
     width: 100%;
+    min-height: 48px;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Division section mobile responsiveness & alignment */
+.division-header-badge {
+  white-space: normal;
+  text-align: left;
+  line-height: 1.35;
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .division-header-wrap {
+    text-align: left;
+  }
+  .division-header-badge {
+    font-size: 0.8125rem;
+    padding: 0.45rem 0.75rem;
+  }
+  .tracking-result-panel {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .w-100-mobile {
+    width: 100% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 
